@@ -1,0 +1,62 @@
+body{
+	background: white;
+}
+#cases .item{
+	width: 877px;
+    margin: auto;
+    padding: 40px 10px;
+    border-bottom: solid 1px #EDEDED;
+}
+#cases .item:last-of-type{
+	border-bottom: none !important;
+}
+#cases .item .icon {
+    width: 168px;
+    height: 168px;
+    display: inline-block;
+}
+#cases .item .icon img {
+    width: 100%;
+    height: 100%;
+}
+#cases .item .content{
+    display: inline-block;
+    width: 607px;
+    margin-left: 72px;
+    vertical-align: top;
+    margin-top: 40px;
+}
+#cases .item .label {
+    font-size: 15px;
+    color: #727272;
+    display: inline-block;
+}
+#cases .item .value {
+    font-size: 15px;
+    display: inline;
+    color: #212121;
+}
+#company{
+	width: 877px;
+    margin: auto;
+    text-align: center;
+    background: #ededed;
+    padding-bottom: 20px;
+}
+#company h2{
+	display: inline-block;
+    border-bottom: solid 3px #ff5722;
+    padding-top: 40px;
+    margin-bottom: 40px;
+    line-height: 36px;
+    font-size: 24px;
+}
+#company .icons {
+    text-align: center;
+}
+#company .icons img {
+    display: inline-block;
+    width: 269px;
+    height: 270px;
+    margin: 3px;
+}

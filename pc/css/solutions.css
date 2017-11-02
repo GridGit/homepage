@@ -1,0 +1,76 @@
+body{
+	background: white !important;
+    cursor: pointer;
+}
+#solutions-voice{
+	margin-top: 24px;
+}
+.banner {
+    width: 880px;
+    height: 360px;
+    margin: auto;
+}
+.banner img {
+    width: 100%;
+    height: 100%;
+}
+.solutions {
+    width: 880px;
+    margin: 40px auto;
+    box-sizing: border-box;
+    border: none;
+    font-size: 0px;
+}
+.solutions .item {
+    width: 440px;
+    box-sizing: border-box;
+    display: inline-block;
+    border: none;
+    padding: 0px 60px;
+    margin: 0px;
+    font-size: 15px;
+    vertical-align: top;
+}
+.solutions .item h3 {
+    font-size: 21px;
+    color: #FF5722;
+    line-height: 44px;
+}
+.solutions .item .desc {
+    font-size: 17px;
+    color: #727272;
+    line-height: 20px;
+    padding-bottom: 40px;
+}
+#solutions-voice .banner:before {
+    content: '语音处理方案';
+    position: absolute;
+    color: white;
+    margin-top: 262px;
+    margin-left: 32px;
+    font-size: 36px;
+}
+#solutions-text .banner:before {
+    content: '文本处理方案';
+    position: absolute;
+    color: white;
+    margin-top: 262px;
+    margin-left: 32px;
+    font-size: 36px;
+}
+#solutions-image .banner:before {
+    content: '图像处理方案';
+    position: absolute;
+    color: white;
+    margin-top: 262px;
+    margin-left: 32px;
+    font-size: 36px;
+}
+#solutions-quick-sale .banner:before {
+    content: '快消品行业处理方案';
+    position: absolute;
+    color: white;
+    margin-top: 262px;
+    margin-left: 32px;
+    font-size: 36px;
+}

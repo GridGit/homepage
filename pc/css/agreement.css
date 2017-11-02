@@ -1,0 +1,34 @@
+.main{
+   width: 1024px;
+   margin: 0 auto;
+   padding-top: 78px;
+   padding-bottom: 50px;
+   font-family:"Microsoft YaHei", "微软雅黑","Times New Roman",Georgia,Serif;
+   font-weight: normal;
+}
+
+.main h2{
+	margin: 20px auto;
+	text-align: center;
+	font-size: 22px;
+	height: 50px;
+	line-height: 50px;
+	font-weight: bold;
+}
+.main h4{
+	margin: 20px 0;
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+}
+.main h5{
+	line-height: 35px;
+	font-size: 19px;
+	font-weight: bold;
+	margin: 20px 0;
+}
+.main p{
+ 	line-height: 30px;
+ 	font-size: 18px;
+}

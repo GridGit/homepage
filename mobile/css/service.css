@@ -1,0 +1,144 @@
+body{
+	background-color: white !important;
+}
+#body{
+	margin-top: 110px !important;
+}
+.section h2 {
+    font-size: 17px;
+    margin-left: 16px;
+    padding-left: 8px;
+    border-left: solid 8px #ff5722;
+    line-height: 24px;
+    font-weight: normal;
+    margin: 40px 0px 40px 16px;
+}
+#data-mark .content .item {
+    width: 244px;
+    display: inline-block;
+    margin-left: 53px;
+    margin-bottom: 10px;
+}
+#data-mark .content .item:before {
+    display: block;
+    content: ' ';
+    width: 21px;
+    height: 21px;
+    background-color: #ffccbc;
+    border-radius: 100%;
+    position: absolute;
+    margin-left: -30px;
+    margin-top: 5px;
+    z-index: -1;
+}
+#data-mark .item .title {
+    font-size: 15px;
+    color: #212121;
+    line-height: 30px;
+}
+#data-mark .item .desc {
+    font-size: 13px;
+    color: #727272;
+    line-height: 18px;
+}
+#data-collect .content {
+    font-size: 0px;
+    text-align: center;
+}
+#data-collect .item {
+    width: 138px;
+    height: 216px;
+    display: inline-block;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #fdeee9;
+    vertical-align: top;
+    border-radius: 15px 0px 15px 0;
+    margin: 6px;
+}
+#data-collect .item .title {
+    font-size: 15px;
+    color: #212121;
+    line-height: 40px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+#data-collect .item .desc {
+    font-size: 13px;
+    color: #727272;
+    line-height: 18px;
+    text-align: center;
+}
+#app-tg .item {
+    text-align: center;
+}
+#app-tg .item .icon {
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+}
+#app-tg .item .title {
+    font-size: 15px;
+    color: #212121;
+    line-height: 38px;
+}
+#app-tg .item .desc {
+    display: inline-block;
+    width: 200px;
+    font-size: 13px;
+    color: #727272;
+    line-height: 18px;
+    padding-bottom: 34px;
+}
+#channel-check .item {
+    text-align: center;
+}
+#channel-check .icon {
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+}
+#channel-check .item .title {
+    font-size: 17px;
+    color: #212121;
+    line-height: 40px;
+}
+#channel-check .item .desc {
+    font-size: 15px;
+    color: #727272;
+    width: 141px;
+    line-height: 21px;
+    display: inline-block;
+    padding-bottom: 40px;
+}
+#other-service .item {
+    width: 276px;
+    height: 122px;
+    background: #fdeee9;
+    margin: auto;
+    margin-bottom: 12px;
+}
+#other-service .item .title {
+    font-size: 15px;
+    line-height: 53px;
+    text-align: center;
+    color: #212121;
+    padding-top: 13px;
+}
+#other-service .item .desc {
+    width: 210px;
+    margin: auto;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: #727272;
+}
+#service-advantage .desc {
+    width: 238px;
+    font-size: 15px;
+    color: #212121;
+    margin-left: 34px;
+    line-height: 21px;
+    padding-left: 16px;
+    border-left: solid 16px #ffccbc;
+}

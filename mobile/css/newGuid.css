@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+    overflow-x: hidden;
+}
+body{
+    height: 100%;
+    overflow-x: hidden;
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    clear:both
+}
+.header{
+    width: 100%;
+    height:204px;
+    margin: 0 auto;
+    background: #212121;
+    position: relative;
+    margin-top: 40px;
+}
+.logo{
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 67px;
+    height:27px;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+.logo_big{
+    width: 141px;
+    height: 36px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+
+.content_desc{
+    width:253px;
+    height: 25px;
+    margin: 0 auto;
+    margin-top: 4px;
+    font-family: PingFangSC-Regular;
+    font-size: 18px;
+    color: #FF5722;
+    letter-spacing: 0;
+}
+#wrap{
+    overflow-x: hidden;
+}
+#list{
+    position: absolute;
+    overflow: hidden;  /*隐藏溢出内容*/
+    list-style: none;
+    margin-left: 8px;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+#list li{
+    float: left;
+    width: 120px;
+    height: 149px;
+    margin: 5px;
+    margin-bottom: 0;
+}
+#list img{
+    width: 100%;
+    height: 100%;
+    display: block; /*解决img撑a的3px空隙*/
+}
+.line{
+    width: 88px;
+    height: 1px;
+    margin: 0 auto;
+    margin-top: 27px;
+    border-top: 1px solid #EDEDED;
+}
+.line_desc{
+    width: 211px;
+    height: 18px;
+    margin: 0 auto;
+    margin-top: 27px;
+    font-family: PingFangSC-Regular;
+    font-size: 13px;
+    color: #727272;
+    letter-spacing: 0;
+}
+.num_money{
+    width: 250px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 8px;
+}
+.num_money img{
+    width: 100%;
+
+}
+.money_desc{
+    width: 78px;
+    height: 18px;
+    margin: 0 auto;
+    margin-top: 27px;
+    font-family: PingFangSC-Regular;
+    font-size: 13px;
+    color: #727272;
+    letter-spacing: 0;
+}
+.task_list{
+    margin-top: 27px;
+    list-style: none;
+    width: 100%;
+}
+.task_list li{
+    width: 100%;
+    height: 40px;
+
+    margin-bottom: 34px;
+
+}
+.task_list .li_left,.task_list .li_right{
+    float: left;
+}
+
+.red_left{
+    width: 56px;
+    height: 40px;
+    background: #F2453D;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+}
+.li_right{
+    margin-left: 8px;
+    width: 205px;
+    height: 40px;
+}
+.li_right .li_right_desc1{
+    width: 220px;
+    height: 17px;
+    font-family:PingFangSC-Regular;
+    font-size: 15px;
+    color: #4A4A4A;
+    letter-spacing: -0.36px;
+}
+.li_right .li_right_desc2{
+    margin-top: 4px;
+    width: 200px;
+    height: 17px;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #B6B6B6;
+    letter-spacing: -0.29px;
+}
+.li_div{
+    width: calc(100% - 35px);
+    margin: 0 auto;
+}
+p{
+    white-space:nowrap}

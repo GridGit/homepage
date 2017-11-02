@@ -1,0 +1,303 @@
+.banner {
+    position: relative;
+    height: 722px;
+    background: #DEEEF4;
+    z-index:-2;
+}
+
+.banner .place-holder {
+    height: 53.6%;
+}
+
+.banner img {
+    position: relative;
+    width: 80%;
+    height: 45%;
+    left: 10%;
+    top: 55%;
+    z-index:-1;
+}
+
+.banner .slogan {
+    width: 100%;
+    height: 120px;
+    margin-top: -58%;
+}
+
+.banner .slogan .s1 {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 28px;
+    color: #212121;
+    font-size: 34px;
+}
+
+.banner .slogan .s2 {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 24px;
+    color: #727272;
+    font-size: 21px;
+}
+
+.content {
+    margin: 0 auto;
+    max-width: 1024px;
+}
+
+.misc {
+    clear: both;
+    position: relative;
+    margin-top: 8px;
+}
+
+.how {
+    width: 504px;
+    height: 686px;
+    background: #EFFAFE;
+}
+
+.how .title {
+    font-size: 24px;
+    margin-top: 32px;
+    text-align: center;
+}
+
+.how .question {
+    color: #212121;
+    font-size: 14px;
+    margin-top: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.how img {
+    position: relative;
+    width: 180px;
+    left: 50%;
+    margin-left: -90px;
+}
+
+.how .img_1 {
+    height: 320px;
+}
+
+.how .img_2 {
+    height: 123px;
+}
+
+.advantage {
+    clear: both;
+    padding-top: 32px;
+    width: 504px;
+    height: 378px;
+    background: #DEEEF4;
+}
+
+.advantage .title {
+    color: #212121;
+    font-size: 24px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.advantage .item {
+    width: 50%;
+    float: left;
+}
+
+.advantage .item img {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    left: 50%;
+    margin-left: -28px;
+    margin-top: 25px;
+}
+
+.advantage .item .title {
+    color: #212121;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.advantage .item .sub-title {
+    color: #727272;
+    font-size: 12px;
+    margin-top: 1px;
+    text-align: center;
+}
+
+.category {
+    clear: both;
+    padding-top: 32px;
+    width: 504px;
+    height: 462px;
+    background: #E5F4F5;
+}
+
+.category .title {
+    color: #212121;
+    font-size: 24px;
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.category .item {
+    width: 50%;
+    float: left;
+}
+
+.category .item img {
+    position: relative;
+    width: 120px;
+    height: 80px;
+    left: 50%;
+    margin-left: -60px;
+    margin-top: 25px;
+}
+
+.category .item .title {
+    color: #212121;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.category .item .sub-title {
+    color: #727272;
+    font-size: 12px;
+    margin-top: 1px;
+    text-align: center;
+}
+
+.workflow {
+    width: 504px;
+    height: 348px;
+    padding-left: 80px;
+    padding-right: 80px;
+    background: #FAFAFA;
+}
+
+.workflow .title {
+    color: #212121;
+    font-size: 24px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.workflow .item {
+    clear: both;
+}
+
+.workflow .item img {
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.workflow .item .text {
+    margin-left: 50px;
+    margin-top: -25px;
+}
+
+.workflow .item .title {
+    color: #212121;
+    font-size: 14px;
+    text-align: left;
+    padding-top: 15px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.workflow .item .sub-title {
+    color: #727272;
+    font-size: 12px;
+    margin-top: 8px;
+    text-align: left;
+}
+
+.customer-praise {
+    width: 504px;
+    height: 360px;
+    padding-left: 80px;
+    padding-right: 80px;
+    background: #EDF8F5;
+}
+
+.customer-praise .title {
+    color: #212121;
+    font-size: 24px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.customer-praise .item {
+    clear: both;
+    margin-top: 30px;
+}
+
+.customer-praise .item .customer {
+    margin-left: 50px;
+    float: left;
+    margin-right: 10px;
+}
+
+.customer-praise .item .name {
+    color: #212121;
+    font-size: 14px;
+    text-align: left;
+    text-align: right;
+}
+
+.customer-praise .item .job-title {
+    color: #727272;
+    font-size: 12px;
+    margin-top: 8px;
+    text-align: left;
+    text-align: right;
+}
+
+.customer-praise .item .divider {
+    background: #D8D8D8;
+    width: 4px;
+    height: 40px;
+    float: left;
+    margin-right: 10px;
+}
+
+.customer-praise .item .praise {
+    color: #727272;
+    font-size: 12px;
+    margin-top: 8px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.price {
+    background: #FEEBE1;
+    width: 504px;
+    height: 126px;
+    padding-left: 200px;
+    padding-top: 104px;
+}
+
+.price a {
+    clear: both;
+    position: relative;
+    text-align: center;
+    border: solid 1px;
+    border-radius: 3px;
+    border-color: #727272;
+    padding: 5px;
+    font-size: 12px;
+}
+

@@ -1,0 +1,23 @@
+#body{
+	background-color: white;
+}
+#body h1{
+	font-size: 17px;
+    color: #727272;
+    text-align: center;
+    font-weight: normal;
+    padding-top: 20px;
+}
+#form-container{
+	width: 296px;
+    margin: 50px auto;
+    height: 800px;
+    overflow: hidden;
+}
+#dituContent{
+	width: 296px;
+	height: 387px;
+	margin: 40px auto;
+	background-image: url(../images/baidu_map.jpg);
+	background-size: cover;
+}
