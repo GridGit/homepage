@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录 - 龙猫数据</title>
+	<link rel="shortcut" href="favicon.ico"  type="image/x-icon"/>
+	<link rel="icon" href="favicon.ico"  type="image/x-icon"/>
+	<link rel="bookmark" href="favicon.ico"  type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/signin.css">
+	<!-- leancloud -->
+	<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+	<script   src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src='js/initLeanCloud.js'></script>
+	<script type="text/javascript" src='js/reuseMethods.js'></script>
+
+</head>
+<body>
+	<div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-tabs pull-right">
+            <li role="presentation" class="active"><a href="login.html">登录</a></li>
+            <li role="presentation"><a href="signup.html">注册</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">龙猫数据</h3>
+      </div>
+
+      <form class="form-signin">
+        <h2 class="form-signin-heading">登录</h2>
+        <label for="inputUsername" class="sr-only">username</label>
+        <input type="username" id="inputUsername" class="form-control" placeholder="username" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+      </form>
+    </div> <!-- /container -->
+    <script type="text/javascript">
+    	// 登录
+    	function login() {
+		  var username = $('#inputUsername').val();
+		  var password = $('#inputPassword').val();
+
+		  // LeanCloud - 登录
+		  
+		  AV.User.logIn(username, password).then(function (loginedUser) {
+		    window.location.href = "products.html";
+		  }, function (error) {
+		  	alert('用户名或密码不正确')
+		    // alert(JSON.stringify(error));
+		  });
+		};
+
+		$(function() {
+		  $(".form-signin").on('submit', function(e) {
+		    e.preventDefault();
+		    login();
+		  });
+		});
+    </script>
+</body>
+</html>

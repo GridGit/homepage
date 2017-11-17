@@ -5,17 +5,16 @@
 	padding: 0;
 	margin: 0;
 }
-body{
-	font-family: Arial,"Microsoft YaHei",sans-serif;
-}
-html,body{
-	/*height: 100%;*/
-	overflow-x: hidden;
-}
 
+/*每个轮播页面样式*/
 #container,.sections,.section{
 	height:100%;
 	position: relative;
+	color: #fff;
+}
+#container{
+	width: 100%;
+	overflow-x: hidden;
 }
 #section0,
 #section1,
@@ -26,53 +25,42 @@ html,body{
 	background-position: 50% 50%;
 }
 #section0{
-	background-image: url(../images/index1.png);
-	color: #fff;
-	text-shadow:1px 1px 1px #333;
+	background-image: url(../images/index0.jpg);
 }
 #section1{
-	color: #fff;
-	text-shadow:1px 1px 1px #333;
-	background-image: url(../images/index0.png);
+	background-image: url(../images/index1.png);
 }
 #section2{
 	background-image: url(../images/index2.png);
-	color: #fff;
-	text-shadow:1px 1px 1px #666;
-}
-#section3{
-	color: #008283;
-	background-image: url(../images/4.jpg);
-	text-shadow:1px 1px 1px #fff;
-}
-.left{
-	float: left;
 }
 
+/*第一个轮播*/
 .intro_section0{
-	width: 60%;
+	width: 800px;
 	margin: 0 auto;
 	margin-top: 500px;
 	font-family: "Microsoft YaHei", "微软雅黑",  "Times New Roman",Georgia,Serif;
 	overflow: hidden;
-
 }
 .intro_section0 div{
 	display: inline-block;
-	float: left;
-	width: 25%
+	width: 195px;
 }
-p{
+.intro_section0 p{
 	font-size: 14px;
+	text-align: center;
 	height: 20px;
 	line-height: 20px;
 }
-span{
+.intro_section0 span{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
 	font-size: 10px;
 	height: 15px;
 	line-height: 15px;
 }
-
+/*第二个轮播*/
 .intro_section1{
 	width: 60%;
 	margin-top: 150px;
@@ -103,6 +91,8 @@ span{
 	color: #F90;
 	border: 1px solid #F90;
 }
+
+/*第三个轮播*/
 .intro_section2{
 	width: 60%;
 	margin-top: 150px;
@@ -130,33 +120,38 @@ span{
 	border-radius: 5px;
 }
 .section2_3:hover{
-		color: #F90;
-		border: 1px solid #F90;
-	}
+	color: #F90;
+	border: 1px solid #F90;
+}
+
+/*媒体查询 屏宽 1100px-1500px*/
 @media screen and (min-width: 1100px) and (max-width: 1500px){
+	/*第一个轮播*/
 	.intro_section0{
-		width: 60%;
+		width: 800px;
 		margin: 0 auto;
 		margin-top: 500px;
 		font-family: "Microsoft YaHei", "微软雅黑",  "Times New Roman",Georgia,Serif;
-		overflow: hidden;
-
 	}
 	.intro_section0 div{
 		display: inline-block;
-		float: left;
-		width: 25%
+		width: 195px;
 	}
-	p{
+	.intro_section0 p{
 		font-size: 18px;
+		text-align: center;
 		height: 25px;
 		line-height: 25px;
 	}
-	span{
+	.intro_section0 span{
+		display: inline-block;
+		width: 100%;
+		text-align: center;
 		font-size: 14px;
 		height: 20px;
 		line-height: 20px;
 	}
+	/*第二个轮播*/
 	.intro_section1{
 		width: 60%;
 		margin-top: 150px;
@@ -187,6 +182,7 @@ span{
 		color: #F90;
 		border: 1px solid #F90;
 	}
+	/*第三个轮播*/
 	.intro_section2{
 		width: 60%;
 		margin-top: 150px;
@@ -219,33 +215,35 @@ span{
 	}
 
 }
+/*媒体查询 大于1500*/
 @media screen and (min-width: 1500px){
+	/*第一个轮播*/
 	.intro_section0{
-		width: 60%;
+		width: 800px;
 		margin: 0 auto;
 		margin-top: 500px;
-		padding-left: 5%;
 		font-family: "Microsoft YaHei", "微软雅黑",  "Times New Roman",Georgia,Serif;
-		overflow: hidden;
-
 	}
 	.intro_section0 div{
 		display: inline-block;
-		float: left;
-		width: 25%;
+		width: 196px;
 	}
 	
-	p{
+	.intro_section0 p{
 		font-size: 22px;
+		text-align: center;
 		height: 30px;
 		line-height: 30px;
 	}
-	span{
+	.intro_section0 span{
+		display: inline-block;
+		width: 100%;
+		text-align: center;
 		font-size: 18px;
 		height: 25px;
 		line-height: 25px;
 	}
-
+	/*第二个轮播*/
 	.intro_section1{
 		width: 60%;
 		margin-top: 200px;
@@ -276,6 +274,7 @@ span{
 		color: #F90;
 		border: 1px solid #F90;
 	}
+	/*第三个轮播*/
 	.intro_section2{
 		width: 60%;
 		margin-top: 200px;
@@ -308,6 +307,8 @@ span{
 	}
 
 }
+
+/*控制点样式*/
 .intro{
 	position: absolute;
 	height: 100%;
@@ -329,7 +330,6 @@ span{
 	top: 50%;
 }
 .horizontal.pages{
-	/*left: 50%;	*/
 	left: 50%;
 	transform: translateX(-27px);
 	bottom: 10px;

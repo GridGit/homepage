@@ -1,103 +1,238 @@
 body{
 	background: white !important;
 }
-#main h2{
-	text-align: center;
-    padding: 50px;
-    font-size: 24px;
-    color: #727272;
+.contact_banner{
+    position: relative;
 }
-#main #form-container{
-	width: 944px;
-    height: 800px;
-    margin: auto;
-    overflow: hidden;
+.contact_banner img{
+    width: 100%;
 }
-#main #form-container form{
-	width: 100%;
-    height: 1000px;
-    overflow: hidden;
+.contact_banner div{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 130px;
+    color: #FFFFFF;
 }
-#main .map-container{
-	width: 944px;
-    height: 369px;
-    margin: auto;
-    margin-bottom: 200px;
-}
-#main .map-container img{
-	width: 100%;
-    height: 100%;
-}
-.contact_type{
-    width: 150px;
-    margin-top: 15px;
+
+.contact_banner h3{
+    width: 100%;
+    line-height: 90px;
     text-align: center;
-    border-right: 1px solid rgba(110, 110, 110, 0.3);
-    border-left: 1px solid rgba(110, 110, 110, 0.3);
-    /*height: 1000px;*/
+    font-size: 64px;
+}
+.contact_banner p{
+    width: 100%;
+    margin-top: 53px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 36px;
+
+}
+
+.main{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.contact_type{
+    display: inline-block;
+    width: 150px;
+    text-align: center;
 }
 
 .contact_type li{
-
+    width: 100%;
     text-align: center;
     line-height: 50px;
-    border-bottom: 1px solid rgba(110, 110, 110, 0.3);
     height: 50px;
-
+    border-bottom: 1px solid gray;
 }
 .contact_type li:hover{
+    border-right: 5px solid #FF5300;
+}
+.contact_type li a{
+    display: inline-block;
+    width: 100%;
+    height: 25px;
+    font-size: 18px;
+    text-align: center;
+}
+.contact_type li a:hover{
     cursor: pointer;
-    color: red;
-    background-color: rgba(110, 110, 110, 0.5);
+    color: #FF5300;
 }
-.contact_intro{
-    position: absolute;
-    left: 160px;
-    top:30px;
-    width: calc(100% - 160px);
+
+.contact_intro,.lm_contact{
+    display: inline-block;
+    margin-left: 50px;
+    width: 950px;
 }
-.contact_img{
+.contact_intro_item{
+    background-color: #F6F6F6;
+    margin-top: 40px;
+    padding-top: 5px;
+    height: 146px;
+}
+.contact_intro h3{
+    
+    height: 25px;
+    margin-top: 15px;
+    line-height: 25px;
+    padding-left: 10px;
+    border-left: 5px solid #FF5300;
+    color: #FF5300;
+    font-size: 20px;
+    line-height: 28px;
+}
+.contact_intro p{
+    margin: 20px 0;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 20px;
+    line-height: 25px;
+    color: #333333;
+    border-top: 1px solid #E3E3E3;
+    font-size: 18px;
+}
+.lm_contact{
+    margin-top: 10px;
+}
+.contact_item {
     width: 100%;
-    height: 230px;
-    background-image: url('../images/about-us.jpg');
-    background-size: cover;
-}
-.contact_intro_content h3{
-    height: 31px;
-    line-height: 31px;
-    text-indent: 40px;
-    width: 120px;
-    margin: 20px auto;
+    margin: 0 auto;
+    background: rgb(245,245,245);
     text-align: center;
-    background-image: url('../images/abouticon.png');
-    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding: 37px 0px 0px 0px;
+    height: 280px;
 }
-.contact_intro_content p{
-    line-height: 35px;
-    margin-top: 20px;
-    font-family: serif,sans-serif;
-}
-.contact_intro_content span{
-    font-weight: bold;
-}
-#lm_contact{
+.contact_content{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    position: relative;
+    border-top: 2px solid rgb(229,229,229);
 
+}
+.contact_content_detail{ 
+    color: #333333;
+}
+.contact_content_detail .content_title{
+    font-size: 18px;
+    padding-bottom: 15px;
+    height: 25px;
+    line-height: 25px;
+}
+.contact_content_detail p{
+    height: 21px;
+    line-height: 21px;
+    font-size: 14px;
+    padding-bottom: 3px;
+}
+.contact_title{
+    padding-bottom: 10px;
+    line-height: 25px;
+    font-size: 20px;
+    color: #FF5300;
+}
+.contact_title span{
+    display: inline-block;
+    width: 6px;
+    height: 21px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #FF5300;
+
+}
+.contact_icon{
     position: absolute;
-    width: calc(100% - 150px);
-    left: 160px;
-    top: 0px;
-
+    top: 20px;
+    left: 500px;
 }
-#dituContent{
-    width: 800px;
-    box-sizing: 2px 2px 2px rgba(110, 110, 110, 0.3);
-
+/*二维码*/
+.contact_icon .requirementImage{
+    width: 125px;
+    height: 125px;
+    background-image: url(../images/businessRequirements.jpg);
+    background-size: contain;
 }
-footer{
-    position: absolute;
-    top: 997px;
-    /*left: 50%;*/
+.contact_icon .cooperationImage{
+     width: 125px;
+     height: 125px;
+     background-image: url(../images/cooperation.png);
+}
+.contact_icon .businessTalksImage{
+    width: 125px;
+    height: 125px;
+    /*background-image: url(../images/businessTalks.png);*/
+}
+.contact_icon .appQuestionImage{
+    width: 125px;
+    height: 125px;
+    background-image: url(../images/appQuestion.png);
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1500px){
+    .contact_banner div{
+        top: 110px;
+    }
+    .contact_banner h3{
+        font-size: 50px;
+    }
+    .contact_banner p{
+        margin-top: 20px;
+        font-size: 32px;   
+    }
+}
+@media screen and (max-width: 1200px){
+    .contact_banner div{
+        top: 70px;
+    }
+    .contact_banner h3{
+        font-size: 45px;
+    }
+    .contact_banner p{
+        margin-top: 15px;
+        font-size: 30px;
+    }
+}
+@media screen and (min-width: 1500px){
+    .contact_icon .requirementImage{
+        width: 200px;
+        height: 200px;
+        background-image: url(../images/businessRequirements.jpg);
+        background-size: contain;
+    }
+    .contact_icon .cooperationImage{
+        width: 200px;
+        height: 200px;
+        background-image: url(../images/cooperation@2x.png);
+        background-size: contain;
+    }
+    .contact_icon .businessTalksImage{
+        width: 200px;
+        height: 200px;
+        background-image: url(../images/businessTalks@2x.png);
+        background-size: contain;
+    }
+    .contact_icon .appQuestionImage{
+        width: 200px;
+        height: 200px;
+        background-image: url(../images/appQuestion@2x.png);
+        background-size: contain;
+    }
+    .contact_item{
+        height: 300px;
+    }
+}
+.contact_icon .desc{
     width: 100%;
-    /*transform: translateX(-400px);*/
-    text-align: center;
+    height: 21px;
+    line-height: 21px;
+    font-size: 14px;
+    color: #333333;
+    text-align:center;
 }
+

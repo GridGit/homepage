@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>龙猫 - 产品服务</title>
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" type="text/css" href="css/service.css">
+<link rel="shortcut" href="favicon.ico"  type="image/x-icon"/>
+<link rel="icon" href="favicon.ico"  type="image/x-icon"/>
+<link rel="bookmark" href="favicon.ico"  type="image/x-icon"/>
+<meta name="Description" content="龙猫数据可根据客户的特定需要，提供多种类型的筛选、分类、标注等服务，以满足客户在模式识别领域进行科研、测试和产品开发的不同需要。">
+<meta name="Keywords" content="龙猫数据,图片采集标注,语音语义采集标注,文本采集标注,视频采集标注,人工智能,人脸识别,自动驾驶,ASR,AI">
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- leancloud -->
+<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+<script   src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- handlebars -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+<script type="text/javascript" src='js/initLeanCloud.js'></script>
+<script type="text/javascript" src='js/reuseMethods.js'></script>
+
+
+<script type="text/javascript" src='js/common.js'></script>
+<!-- 百度统计 -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6a5cd8b7015581608bf67e1865f79868";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- 判断设备类型 -->
+<script language="javascript">
+  // 平台、设备和操作系统
+  var system ={
+    win : false,
+    mac : false,
+    xll : false
+  };
+  // 检测平台
+  var p = navigator.platform;
+  system.win = p.indexOf("Win") == 0;
+  system.mac = p.indexOf("Mac") == 0;
+  system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+
+  // 跳转语句，如果是手机访问就自动跳转到 m 页面
+  if (!system.win && !system.mac && !system.xll) {
+  	  window.location.href = "http://m.longmaosoft.com";
+  }
+</script>
+</head>
+<body>
+<header>
+  <div class="cont">
+
+    <a href="index.html"><img id="icon" src="images/logo.png">龙猫数据</a>
+    <ul>
+      <li><a href="index.html">首页</a></li>
+      <li class="current"><a href="service.html">产品服务</a></li>
+      <li><a href="solutions.html">行业方案</a></li>
+      <li><a href="contact.html">联系我们</a></li>
+    </ul>
+  </div>
+</header>
+<div class="service_banner common_banner">
+	<img src="images/product.png">
+</div>
+<div class="main" >
+	<div class="service_wrap">
+		<div class="service_item">
+			<div class="service_img service_img1"></div>
+			<div class="service_text">
+				<h3>图片数据标注服务</h3>
+				<p>龙猫数据可根据客户的特定需要，提供多种类型的筛选、分类、标注等服务，以满足客户在模式识别领域进行科研、测试和产品开发的不同需要。如人物表情标注、人脸多点标注、车辆标注、行进轨迹标注、特定符号标注、特殊场景标注、地图位置标注。</p>
+				<div><span>图片标注</span><span>图片数据</span><span>数据标注</span></div>
+			</div>
+		</div>
+		<div class="service_item">
+			<div class="service_img service_img2"></div>
+			<div class="service_text">
+				<h3>文本数据标注服务</h3>
+				<p>龙猫数据除了能提供多种文本语料数据库资源之外，为用户提供多语种文本数据标注服务，如网页相关性标注、情感标注等，并具备文本语料内容分类和主题归纳等更深层的处理能力，可满足自然语言处理的不同层次的要求。同时，还具有多语种机器翻译平行语料、手机短信、电子邮件等文本数据库。</p>
+				<div><span>文本数据</span><span>数据标注</span><span>文本标注</span><span>标注服务</span></div>
+			</div>
+		</div>
+		<div class="service_item">
+			<div class="service_img service_img3"></div>
+			<div class="service_text">
+				<h3>语音数据标注和转写服务</h3>
+				<p>拥有专业语音转写团队，具有丰富的语言学背景并接受过专业的数据转写培训， 能够为语音数据提供标注和转写服务，并具备每月处理6000+小时以上的语音数据处理能力。并且，随着客户需求的增加，我们的语音数据处理能力也在与日俱增。
+				<div><span>语音数据</span><span>语音数据标注</span><span>语音转写</span></div>
+			</div>
+		</div>
+		<div class="service_item">
+			<div class="service_img service_img4"></div>
+			<div class="service_text">
+				<h3>视频数据标注服务</h3>
+				<p>针对客户的具体需求，我们可以提供如下类型的视频数据标注服务：视频主体分类、人物及物体属性标记、主体行踪轨迹分析、主体朝向标记、画面起始点标记。</p>
+				<div><span>视频标注</span><span>数据标注</span></div>
+			</div>
+		</div>
+		<div class="service_item">
+			<div class="service_img service_img5"></div>
+			<div class="service_text">
+				<h3>图像数据采集服务</h3>
+				<p>面向人脸识别、表情识别、车辆识别、手势识别和机器视觉等人机交互和模式识别技术研发需求，可提供各类图形、图像数据的采集和标注服务。</p>
+				<div><span>图像采集</span><span>图像数据</span><span>数据采集</span></div>
+			</div>
+		</div>
+		<div class="service_item">
+			<div class="service_img service_img6"></div>
+			<div class="service_text">
+				<h3>文本数据采集服务</h3>
+				<p>“龙猫数据”拥有经验丰富的专家团队和技术专家，能够为客户提供多种类的文本语料数据采集制作服务。文本语料数据采集的内容覆盖科研、生活、工作、娱乐等人类活动的各个方面，形式包含新闻、博客、论坛、微博、对话设计、学术期刊等，可以满足用户在语音合成、语音识别、自然语言处理、人工智能等技术建模研究的需要。</p>
+				<div><span>文本采集</span><span>数据采集</span></div>
+			</div>
+		</div>
+		<div class="service_item">
+			<div class="service_img service_img7"></div>
+			<div class="service_text">
+				<h3>音频视频数据采集服务</h3>
+				<p>全国各地方言、普通话、少数民族、男女童声等本地发音人语音采集。语音内容可为单词短句、诗词短文、歌曲等。根据人声频特点，区分到每个方言发音者，覆盖所有口音特征让音频开发工作轻松进行。视频可为特定人物、环境、操作场景等复杂环境视频。</p>
+				<div><span>音频采集</span><span>视频采集</span></div>
+			</div>
+		</div>
+		<div class="service_item">
+			<div class="service_img service_img8"></div>
+			<div class="service_text">
+				<h3>共享单车运维辅助管理</h3>
+				<p>巡查共享单车区域投放、车辆损坏违规情况，提供线下运营维护协助服务，帮助提升用户体验。</p>
+				<div><span>运维管理</span></div>
+			</div>
+		</div>
+		<div class="service_item">
+			<div class="service_img service_img9"></div>
+			<div class="service_text">
+				<h3>广告投放情况检查</h3>
+				<p>为每位客户量身定制城市及点位的户外广告监测方案,检查公交站牌、电梯间、楼宇大厦上的广告展示情况,对户外广告投放执行进行督查，全程跟踪服务。</p>
+				<div><span>广告投放检查</span><span>问卷调查</span></div>
+			</div>
+		</div>
+		<div class="service_item">
+			<div class="service_img service_img10"></div>
+			<div class="service_text">
+				<h3>问卷调查产品陈列巡检</h3>
+				<p>巡查产品的陈列情况，SKU是否齐全，提升消费者的购物体验，提升产品动销。</p>
+				<div><span>产品陈列巡检</span><span>问卷调查</span></div>
+			</div>
+		</div>
+		<div class="service_item">
+			<div class="service_img service_img11"></div>
+			<div class="service_text">
+				<h3>问卷调查生产日期巡检</h3>
+				<p>巡查陈列的快消品生产日期、生产批次，降低产品临期风险，将产品的新鲜度转化成终端销售优势。</p>
+				<div><span>问卷调查</span></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="detail" style="display: none;">
+	<div class="crumbs"><a href="service.html">产品服务</a><a href="#">/图片数据采集标注</a></div>
+	<div class="detail_top">
+		<div class="detail_top_img"><img src="images/details0.png"></div>
+		<div class="detail_top_text">
+			<h3>图片数据采集标注</h3>
+			<div><span>图片标注</span><span>图片数据</span><span>数据标注</span></div>
+			<p>龙猫数据可根据客户的特定需要，提供多种类型的筛选、分类、标注等服务，以满足客户在模式识别领域进行科研、测试和产品开发的不同需要。如人物表情标注、人脸多点标注、车辆标注、行进轨迹标注、特定符号标注、特殊场景标注、地图位置标注。</p>
+			<div><span class="span_btn">数据定制</span><span calss='span_btn'>咨询客服</span></div>
+		</div>
+	</div>
+	<div class="detail_middle">
+		<span>详情介绍</span><span>数据样例</span>
+	</div>
+	<div class="detail_bottom">
+		<h3>详情介绍</h3>
+		<p>
+			龙猫数据不仅可以提供各类图像数据的标注服务，如人脸标注、车辆标注等，同时，根据客户的特定需要，提供多种类型的筛选、分类、标注等服务，以满足客户在模式识别领域进行科研、测试和产品开发的不同需要。
+			人脸多点标注
+			人物表情标注
+			车辆标注
+			图片分类
+			图片质量评估
+			行进轨迹标注
+			特定符号标注
+			特殊场景标注
+			OCR结果校验等
+			地图位置标注(LBS)
+		</p>
+		<h3>
+			龙猫数据
+		</h3>
+		<p>
+			图片数据标注是龙猫数据专业服务之一。专业标注团队快速完成客户所需任务，龙猫数据保质保量产品合格率达98%以上。在人工智能领域具体较强的竞争力和不错的客户反响。国内人工智能领域企业都有较好的合作关系。
+		</p>
+		<h3>
+			适应范围
+		</h3>
+		<p>
+			人脸识别、车辆识别、自动驾驶、安全认证
+		</p>
+		<h3>
+			数据格式
+		</h3>
+		<p>
+			文件格式 :  jpg  
+		</p>
+
+	</div>
+	<div>
+		<img src="">
+	</div>
+</div>
+<footer>
+	<div class="footer_href">
+		<ul>
+			<li><a href="contact.html#1">关于我们</a></li>
+			<li><a href="contact.html#2">联系我们</a></li>
+			<li><a href="agreement.html">服务协议</a></li>
+			<li><a href="statement.html">隐私声明</a></li>
+		</ul>
+	</div>
+	<div class="corporate_info">
+		 Copyright © 2017 北京安捷智合科技有限公司。 保留所有权 | <a  href="http://www.miitbeian.gov.cn/">京ICP备14049781号</a>
+	</div>
+</footer>
+
+<script type="text/javascript" src="js/blocksit.min.js"></script>
+
+<script type="text/javascript" data-tempalte=''>
+	
+</script>
+<script type="text/javascript">
+  ~function () {
+    $('.misc').BlocksIt({
+      numOfCol: 2,
+      offsetX: 8,
+      offsetY: 8
+    });
+  }();
+</script>
+<script type="text/javascript">
+	(function(){
+		var service_item = $('.service_item');
+		var detail = $('.detail');
+		var main = $('.main');
+
+		// service_item.on('click', function(e){
+		// 	e.stopPropagation();
+  //           e.preventDefault();
+
+  //           main.slideUp();
+  //           detail.slideDown();
+
+  //           window.scrollTo(0, 0);
+		// })
+	})()
+</script>
+<!-- <script src="//hm.baidu.com/h.js%3F1f2540638fc770981b7fd3ddb4ca0dcb"></script> -->
+</body>
+</html>

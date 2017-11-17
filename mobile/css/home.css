@@ -7,41 +7,25 @@
     box-shadow: 0 0 2px 0 #B6B6B6;
     padding: 20px 0px;
     box-sizing: border-box;
-        display: block;
-}
-#body #banner{
-	background-image:url(../images/home_banner.jpg) ;
-	background-size: cover;
-	height: 200px;
-    box-sizing: border-box;
-	border: none !important;
-}
-#body #banner h2{
-	font-size: 15px;
-	width: 270px;
-	color: white;
-	margin: 50px auto 25px auto;
-	text-align: center;
-}
-#body #banner .enter{
-	font-size: 15px;
-	text-align: center;
-	width: 88px;
-	height: 28px;
-	line-height: 28px;
-	border-radius: 3px;
-	border: solid 2px #FFFFFF;
-	margin: auto;
-	color: #FFFFFF;
-	text-decoration: none !important;
     display: block;
+    font-family: "Microsoft YaHei", "微软雅黑",  "Times New Roman",Georgia,Serif;
 }
 #body .section .icon {
     width: 60px;
     height: 60px;
     display: inline-block;
-    margin: 0px 15px;
+    margin-left: 10px;
+    margin-top: 10px;
     vertical-align: top;
+}
+#body .section .co_icon:nth-child(3n + 1){
+    margin-left: 20px;
+}
+#body .section .co_icon:nth-child(3n + 2){
+    margin-left: 40px;
+}
+#body .section .co_icon:nth-child(3n + 3){
+    margin-left: 40px;
 }
 #body .section .icon img {
     width: 100%;
@@ -50,28 +34,36 @@
 #body .section .content {
     display: inline-block;
     width: 183px;
+    margin-left: 20px;
+}
+.section_title{
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(110, 110, 110);
+    line-height: 30px;
+    font-size: 12px;
+    font-family: "Microsoft YaHei", "微软雅黑",  "Times New Roman",Georgia,Serif;
+    text-align: center;
 }
 #body .section .content .desc {
-    font-size: 12px;
+    font-size: 10px;
     color: #727272;
     line-height: 14px;
 }
-#body .section .content .enter {
-    font-size: 12px;
-    color: #ff5722;
-    line-height: 30px;
-}
-/*
-#downPage{
-    height:901px;
+
+.index_wrap{
     width: 304px;
-    display: none;
-    margin: auto;
-    margin-top: 12px;
-    background-color: #ffffff;
-    box-shadow: 0 0 2px 0 #B6B6B6;
-    padding: 20px 0px;
-    box-sizing: border-box;
+    height: 150px;
+    margin: 0 auto;
     overflow-x: hidden;
-    border: none;
-}*/
+    overflow-y: hidden;
+    position: relative;
+}
+.co_title{
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+    font-weight: bold;
+    line-height: 40px;
+    font-family: "Microsoft YaHei", "微软雅黑",  "Times New Roman",Georgia,Serif;
+}

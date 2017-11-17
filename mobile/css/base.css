@@ -16,6 +16,26 @@ a{
 	top: 0px;
 	z-index: 1000;
 }
+.bar{
+    height: 20px;
+    line-height: 20px;
+    margin-left: 1%;
+    margin-top: 5px;
+}
+.bar span{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.5rem;
+    margin-left: 5px;
+}
+.bar .bar_icon{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-image: url('../images/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 #header h1{
 	padding-left: 16px;
     font-size: 14px;
@@ -87,7 +107,7 @@ a{
 }
 
 #footer{
-	padding: 60px 0px 80px 0px;
+	
 }
 #footer .menues{
 	width: 273px;
@@ -105,5 +125,6 @@ a{
     text-align: center;
     font-size: 12px;
     color: #727272;
-    padding-top: 40px;
+    padding-top: 20px;
 }
+

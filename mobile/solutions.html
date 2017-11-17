@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>龙猫众包 - 解决方案</title>
+	<title>龙猫数据 - 行业方案</title>
 	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 	<meta http-equiv="Cache-Control" content="no-siteapp"/>
 	<meta name="mobile-web-app-capable" content="yes">
@@ -12,6 +12,7 @@
 	<meta name="msapplication-TileColor" content="#0e90d2">
 	<link rel="shortcut icon" href="images/icon.png"/>
 	<link rel="bookmark" href="images/icon.png"/>
+	<link rel="icon" href="favicon.ico"  type="image/x-icon"/>
 	<!-- 禁止页面缓存 -->
 	<META HTTP-EQUIV="Pragma" CONTENT="no-cache"> 
 	<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"> 
@@ -31,24 +32,33 @@
 	
 	  // 跳转语句，如果是 pc 访问就自动跳转到 www 页面
 	  if (system.win || system.mac || system.xll) {
-	    window.location.href = "http://www.longmaosoft.com";
+	    // window.location.href = "http://www.longmaosoft.com";
 	  }
 	</script>
 	<link rel="stylesheet" type="text/css" href="css/base.css"/>
 	<link rel="stylesheet" type="text/css" href="css/solutions.css"/>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?8268afe78139f14e579a15fcba9196f6";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
 </head>
 <body>
 	<script type="text/javascript">document.getElementById('viewport').setAttribute('content', 'width=320, initial-scale=' + window.innerWidth / 320 + ', user-scalable=no');</script>
 	<div id="header">
-		<h1>龙猫众包</h1>
+		<div class="bar"><span class="bar_icon"></span><span class="bar_title">龙猫数据</span></div>
 		<div id="menues">
 			<a href="index.html" class="item">首页</a>
-			<a href="service.html" class="item">服务价格</a>
+			<a href="service.html" class="item">产品服务</a>
 			<a href="solutions.html" class="item current">行业方案</a>
-			<a href="cases.html" class="item">案例</a>
-			<a href="workflow.html" class="item">流程</a>
-			<a href="newGuid.html" class="item">下载龙猫</a>
+			
 			<a href="contact.html" class="item">联系我们</a>
+			<a href="about.html" class="item">关于我们</a>
+			<a href="newGuid.html" class="item">下载龙猫</a>
 		</div>
 	</div>
 	<div id="body">
@@ -158,15 +168,6 @@
 		</div>
 	</div>
 	<div id="footer">
-		<div class="menues">
-			<a href="index.html" class="item">首页</a>
-			<a href="service.html" class="item">服务价格</a>
-			<a href="solutions.html" class="item">行业解决方案</a>
-			<a href="workflow.html" class="item">流程</a>
-			<a href="cases.html" class="item">案例</a>
-			<a href="newGuid.html" class="item">下载龙猫</a>
-			<a href="contact.html" class="item">联系我们</a>
-		</div>
 		<div id="copyright">
 			Copyright © 2017 <br>北京安捷智合科技有限公司。 保留所有权利。 | <a href="http://www.miitbeian.gov.cn/" style="color: #727272">京ICP备14049781号</a>
 		</div>

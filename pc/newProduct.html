@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加产品 - 龙猫数据</title>
+	<link rel="shortcut" href="favicon.ico"  type="image/x-icon"/>
+	<link rel="icon" href="favicon.ico"  type="image/x-icon"/>
+	<link rel="bookmark" href="favicon.ico"  type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/newProduct.css">
+	<!-- leancloud -->
+	<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+	<script   src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<!-- handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+	<script type="text/javascript" src='js/initLeanCloud.js'></script>
+	<script type="text/javascript" src='js/reuseMethods.js'></script>
+</head>
+<body>
+	<div class="container">
+      <div class="header clearfix">
+        <h3 class="text-muted">龙猫数据</h3>
+      </div>
+	  <h2 class="new-product-heading">发布产品</h2>
+      <form class="new-product">
+      	<div class="info-section">
+	        <label for="product-title">产品名称</label>
+	        <input type="title" id="inputTitle" class="form-control" placeholder="商品名称"  autofocus required='true'>
+			<label for="product-tag" >产品标签</label>
+			<div id="inputTag">
+				<input type="tag" class="form-control tag" placeholder="产品标签1">
+				<input type="tag" class="form-control tag" placeholder="产品标签2">
+				<input type="tag" class="form-control tag" placeholder="产品标签3">		
+			</div>
+	        <label for="product-description" >产品描述</label>
+	        <textarea type='description' id="inputDescription" class="form-control" placeholder="产品描述" required="true"></textarea>
+			<label for="inputFile">产品图片描述</label>
+			<input type="file" id="inputImg" class="form-control" placeholder="上传图片" accept = 'image/*'/>
+
+      	</div>
+      	<div class="info-section">
+	      	<div class="product-details-wrap">
+	      		<label for="product-details">详情介绍</label>
+				<textarea type='details' id="inputDetails" class="form-control" placeholder="详情介绍" required="true"></textarea>
+				<label>详情图片</label>
+				<input type="file"  class="form-control inputDetailsImg" placeholder="详情图片" accept="image/*" />
+				<labe>详情图片描述</label>
+				<input type="text" placeholder="详情图片描述" class="form-control inputDetailsText">
+	      	</div>
+	      	<div>
+	      		<span class="btn btn-xs btn-success" id="addDetailsImg">添加详情图片</span> 
+	      	</div>
+			<div class="product-example-wrap">
+				<label for="product-example">数据样例图片</label>
+				<input type="file" class="form-control inputExampleImg" placeholder="样例图片" accept="image/*" />
+				<labe>数据样例图片描述</label>
+				<input type="" name="" placeholder="数据样例图片描述" class="form-control inputExampleText">
+			</div>
+			<div>
+				<span class="btn btn-xs btn-success" id="addDataExample">添加数据样例</span>
+			</div>
+      	</div>
+		
+		
+
+        <div class="operate">
+        	<button class="btn btn-lg btn-success " type="submit">发布</button>
+        	<button class="btn btn-lg btn-primary " id="return">返回</a></button>
+        </div>
+       
+      </form>
+    </div> <!-- /container -->
+    <script type="text/javascript">
+
+    	
+
+    	// 添加详情图片
+    	$('#addDetailsImg').on('click', function(e){
+    		e.stopPropagation();
+    		e.preventDefault();
+    		
+    		var html = '<label>详情图片<label/>'	
+    				+ '<input type="file" class="form-control inputDetailsImg" placeholder="详情图片" accept="image/*" />'
+    				+ '<labe>详情图片描述</label><input type="text" placeholder="详情图片描述" class="form-control inputDetailsText">'
+
+    		$('.product-details-wrap').append(html);
+
+    	})
+    	// 添加数据样例
+    	$('#addDataExample').on('click', function(e){
+    		e.stopPropagation();
+    		e.preventDefault();
+
+    		var html = '<label for="product-example">数据样例图片</label>'
+    				+ '<input type="file" class="form-control inputExampleImg" placeholder="样例图片" accept="image/*" />'
+    				+ '<labe>数据样例图片描述</label>'
+    				+ '<input type="" name="" placeholder="数据样例图片描述" class="form-control inputExampleText">'
+
+    		$('.product-example-wrap').append(html);
+
+    	})
+
+    	// 发布新产品
+    	var Product = AV.Object.extend('Product');
+
+		function releaseNewProduct() {
+		  // 产品名称
+		  var title = $('#inputTitle').val();
+		  // 产品标签
+		  var tags = $('#inputTag input');
+		  var tagsArr = []
+		  for(var i = 0; i < tags.length; i++){
+		  	if($(tags[i]).val() != ''){
+		  		tagsArr.push($(tags[i]).val());
+		  	}
+		  }
+		  // 产品描述
+		  var description = $('#inputDescription').val();
+		  // 产品图片
+		  var img = $('#inputImg')[0].files[0];
+		  if(img){
+		  	var imgName = img.name;
+		  	var avImg = new AV.File(imgName, img);	
+		  }
+		  // 产品详情
+		  var details = $('#inputDetails').val();
+		  // 产品详情图片
+		  var detailsImgfileLen = $('.inputDetailsImg').length;
+		  var detailsImgArr = [];
+		  for(var i = 0; i < detailsImgfileLen; i++){
+		  	var name = $('.inputDetailsImg')[i].files[0].name;
+		  	var avImgFile = new AV.File(name, $('.inputDetailsImg')[i].files[0]);
+		  	
+		  	detailsImgArr.push(avImgFile);	
+		  	
+		  }
+		  var detailsImgArrObj = {
+		  	'detailsImgArr': detailsImgArr
+		  }
+		  // 产品详情图片描述
+		  var detailsTextLen = $('.inputDetailsText').length;
+		  var detailsTextArr = [];
+		  for(var i = 0; i < detailsTextLen; i++){
+		  	var text = $($('.inputDetailsText')[i]).val();
+		  	detailsTextArr.push(text);
+		  }
+
+
+		  // 数据样例图片
+		  var exampleImgfileLen = $('.inputExampleImg').length;
+		  var exampleImgArr = [];
+		  for(var i = 0; i < exampleImgfileLen; i++){
+	  		var name = $('.inputExampleImg')[i].files[0].name;
+	  		var avImgFile = new AV.File(name, $('.inputExampleImg')[i].files[0]);
+	  		exampleImgArr.push(avImgFile);
+		  }
+
+		  var exampleImgArrObj = {
+		  	'exampleImgArr': exampleImgArr
+		  }
+
+		  // 数据样例图片图片说明
+		  var exampleTextLen = $('.inputExampleText').length;
+		  var exampleTextArr = [];
+		  for(var i = 0; i < exampleTextLen; i++){
+		  	var text = $($('.inputExampleText')[i]).val();
+		  	exampleTextArr.push(text);
+		  }
+
+
+		  // var inputExample = $('.inputExampleImg')[0].files[0];
+		  // if(inputExample){
+		  // 	var inputExampleName = inputExample.name;
+		  // 	var avInputExampleName = new AV.File(inputExampleName, inputExample);	
+		  // }
+		  
+
+		 
+
+		  // LeanCloud - 当前用户
+		  var currentUser = AV.User.current();
+
+		  var product = new Product();
+		  // 产品名称
+		  product.set('title', title);
+		  // 产品标签
+		  product.set('tags', tagsArr);
+		  // 产品描述
+		  product.set('description', description);
+		  // 产品所有者
+		  product.set('owner', AV.User.current());
+		  // 产品图片描述
+		  product.set('image', avImg);
+		  // 产品详情
+		  product.set('details', details);
+		
+		  // 保存每一个详情图片文件
+		  product.set('detailsImgArrLength', detailsImgArr.length);
+		  
+		  for(var i = 0; i < detailsImgArr.length; i++){
+		  	product.set('detailsImgArr'+ i, detailsImgArr[i]);
+		  	
+		  }
+		 
+		  // 产品详情图片
+		  // product.set('detailsImgArr', detailsImgArr)
+		  // 产品详情图片描述
+		  product.set('detailsTextArr', detailsTextArr)
+
+		  // 保存每一个样例图片文件
+		  product.set('exampleImgArrLength', exampleImgArr.length);
+
+		  for(var i = 0; i < exampleImgArr.length; i++){
+		  	product.set('exampleImgArr' + i, exampleImgArr[i]);
+		  }
+		  // 数据样例图片
+		  // product.set('exampleImgArr', exampleImgArr);
+		  // 数据样例图片描述
+		  product.set('exampleTextArr', exampleTextArr);
+	
+		  // product.set('inputExample', avInputExampleName);
+		  // return;
+		  product.save().then(function() {
+		    window.location.href = "products.html";
+		  }, function(error) {
+		    alert(JSON.stringify(error));
+		  });
+		};
+
+		$(function() {
+		  if (isCurrentUser()) {
+		    $(".new-product").on('submit', function(e) {
+		      e.preventDefault();
+		      releaseNewProduct();
+		    });
+		    $('#return').on('click', function(e){
+		    	e.preventDefault();
+		    	window.location.href = 'products.html';
+		    });
+
+		  } else {
+		    window.location.href = "login.html";
+		  }
+		});
+
+    </script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>龙猫众包 - 联系我们</title>
+		<title>龙猫数据 - 联系我们</title>
 		<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta http-equiv="Cache-Control" content="no-siteapp" />
 		<meta name="mobile-web-app-capable" content="yes">
@@ -32,12 +32,21 @@
 
 			// 跳转语句，如果是 pc 访问就自动跳转到 www 页面
 			  if (system.win || system.mac || system.xll) {
-			    window.location.href = "http://www.longmaosoft.com";
+			    // window.location.href = "http://www.longmaosoft.com";
 			  }
 		</script>
 		<link rel="stylesheet" type="text/css" href="css/base.css" />
 		<link rel="stylesheet" type="text/css" href="css/contact.css" />
 		<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?8268afe78139f14e579a15fcba9196f6";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
 	</head>
 
 	<body>
@@ -45,69 +54,76 @@
 			document.getElementById('viewport').setAttribute('content', 'width=320, initial-scale=' + window.innerWidth / 320 + ', user-scalable=no');
 		</script>
 		<div id="header">
-			<h1>龙猫众包</h1>
+			<div class="bar"><span class="bar_icon"></span><span class="bar_title">龙猫数据</span></div>
 			<div id="menues">
 				<a href="index.html" class="item">首页</a>
-				<a href="service.html" class="item">服务价格</a>
+				<a href="service.html" class="item">产品服务</a>
 				<a href="solutions.html" class="item">行业方案</a>
-				<a href="cases.html" class="item">案例</a>
-				<a href="workflow.html" class="item">流程</a>
-				<a href="newGuid.html" class="item">下载龙猫</a>
 				<a href="contact.html" class="item current">联系我们</a>
+				<a href="about.html" class="item">关于我们</a>
+				<a href="newGuid.html" class="item">下载龙猫</a>
 			</div>
 		</div>
 		<div id="body">
-			<h1>有任何疑问，都欢迎联系我们 ;-)</h1>
-			<!-- 嵌入 mike crm 表单 -->
-			<div id="form-container">
-				<iframe src="" style="width: 300px;height: 100%; overflow: hidden;border: none;"></iframe>
-			</div>
-			<!-- 联系方式 -->
-			<div id="contact">
-				<div class="item">
-					<div class="icon">
-						<img src="images/Bitmap.png" />
-					</div>
-					<div class="content">
-						<div class="title">QQ</div>
-						<div class="desc">1072730099</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="icon">
-						<img src="images/ic_call_black_48dp_2x@2x.png" />
-					</div>
-					<div class="content">
-						<div class="title">电话</div>
-						<div class="desc">400 000 7190</div>
+			<div id="lm_contact" class="lm_contact">
+				<div class="contact_item content_item_height">
+					<div class="contact_title"><span></span>业务需求</div>
+					<div class="contact_content">
+						<div class="contact_content_detail">
+							<p class="content_title">数据采集、数据标注、渠道检查及其他各种定制服务</p>
+							<p><span>联系人：</span><span>葛女士</span></p>
+							<p><span>联系电话：</span><span>15201516012</span></p>
+							<p><span>通信地址：</span><span>北京市海淀区知春路<br>锦秋国际大厦A座709</span></p>
+							<p><span>Email：</span><span>gejingjing@longmaosoft.com</span></p>
+						</div>
+						<div class="contact_icon">
+							<img src="images/businessRequirements.jpg">
+						</div>
 					</div>
 				</div>
-				<div class="item">
-					<div class="icon">
-						<img src="images/youxiang.png" />
-					</div>
-					<div class="content">
-						<div class="title">邮箱</div>
-						<div class="desc">hello@longmaosoft.com</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="icon">
-						<img src="images/dizhi.png" />
-					</div>
-					<div class="content">
-						<div class="title">地址</div>
-						<div class="desc">北京市海淀区知春路锦秋国际大厦&nbsp;A709</div>
+				<div class="contact_item content_item_height">
+					<div class="contact_title"><span></span>渠道合作</div>
+					<div class="contact_content">
+						<div class="contact_content_detail">
+							<p class="content_title">数据、推广、广告类任务承接，线下团队接入，资源互换</p>
+							<p><span>联系人：</span><span>喻先生</span></p>
+							<p><span>联系电话：</span><span>18820802980</span></p>
+							<p><span>通信地址：</span><span>北京市海淀区知春路<br>锦秋国际大厦A座709</span></p>
+							<p><span>Email：</span><span>yuxun@longmaosoft.com</span></p>
+						</div>
+						<div class="contact_icon">
+							<img src="images/cooperation.png">
+						</div>
 					</div>
 				</div>
-				<div class="item">
-					<div class="icon">
-						<img src="images/wechat_icon.png" />
+				<div class="contact_item content_item_height">
+					<div class="contact_title"><span></span>APP日常使用问题请咨询</div>
+					<div class="contact_content">
+						<div class="contact_content_detail">
+							<p class="content_title">龙猫日常企业客服</p>
+							<p><span>QQ：</span><span>1789347474</span></p>
+							<p><span>Email：</span><span>lihuijuan@longmaosoft.com</span></p>
+						</div>
+						<div class="contact_icon icon_qq">
+							<img src="images/appQuestion.png">
+						</div>
 					</div>
-					<div class="content">
-						<div class="title">微信</div>
-						<div class="desc" style="width: 96px;height: 96px;">
-							<img src="images/WechatIMG1.jpeg" />
+				</div>
+				<div class="contact_item content_item_height">
+					<div class="contact_title"><span></span>商务洽谈</div>
+					<div class="contact_content">
+						<div class="contact_content_detail">
+							<p class="content_title">企业融资、媒体采访、战略合作</p>
+							<p><span>Email：</span><span>hello@longmaosoft.com</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="contact_item content_item_height">
+					<div class="contact_title"><span></span>龙猫数据北京总部</div>
+					<div class="contact_content">
+						<div class="contact_content_detail">
+							<p><span>地址：</span><span>北京市海淀区知春路<br>锦秋国际大厦A座709</span></p>
+							<p><span>电话：</span><span>010-82063199</span></p>
 						</div>
 					</div>
 				</div>
@@ -116,15 +132,6 @@
 			<div id="dituContent"></div>
 		</div>
 		<div id="footer">
-			<div class="menues">
-				<a href="index.html" class="item">首页</a>
-				<a href="service.html" class="item">服务价格</a>
-				<a href="solutions.html" class="item">行业解决方案</a>
-				<a href="workflow.html" class="item">流程</a>
-				<a href="cases.html" class="item">案例</a>
-				<a href="newGuid.html" class="item">下载龙猫</a>
-				<a href="contact.html" class="item">联系我们</a>
-			</div>
 			<div id="copyright">
 				Copyright © 2017 <br>北京安捷智合科技有限公司。 保留所有权利。 | <a href="http://www.miitbeian.gov.cn/" style="color: #727272">京ICP备14049781号</a>
 			</div>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>产品详情列表 - 龙猫数据</title>
+	<link rel="shortcut" href="favicon.ico"  type="image/x-icon"/>
+	<link rel="icon" href="favicon.ico"  type="image/x-icon"/>
+	<link rel="bookmark" href="favicon.ico"  type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/products.css">
+	<!-- leancloud -->
+	<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+	<script   src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<!-- handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+	<script type="text/javascript" src='js/initLeanCloud.js'></script>
+	<script type="text/javascript" src='js/reuseMethods.js'></script>
+</head>
+<body>
+	<div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav pull-right">
+            <li role="presentation"><a href="#" onclick="logout()">退出登录</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">龙猫数据</h3>
+      </div>
+      <div>
+        <a class="btn btn-primary new-product" href="newProduct.html">发布一个新产品</a>
+      </div>
+      
+      <div class="row products-detail">
+        <!-- Products list content -->
+        <script id="products-list" type="text/x-handlebars-template">
+          {{#each products}}
+          <div class="col-sm-6 col-md-4 product-detail" id="product-detail">
+            <div class="thumbnail">
+           	  <h4>产品图片</h4>
+              <img src={{productImageUrl}}>
+              <div class="caption">
+                <h4>产品名称：{{{productTitle}}}</h4>
+               	<h4>标签：</h4>
+                <div>
+                	{{# productTags}}
+                	<span>{{{this}}}</span>
+                	{{/ productTags}}       	
+                </div>
+                <p>产品描述：{{{productDescription}}}</p>
+                <p>详情介绍：{{{details}}}</p>
+                <p>来自：{{{ownerUsername}}}</p>
+                <p>发布时间：{{{releaseTime}}}</p>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+        </script>
+      </div>
+    </div> <!-- /container -->
+    <script type="text/javascript">
+    	// handlebars context
+		var context = {
+		  products: []
+		};
+
+		function setupData() {
+		  // LeanCloud - 查询
+		  
+		  var query = new AV.Query('Product');
+		  query.include('owner');
+		  query.include('image');
+		  query.descending('createdAt');
+		  query.find().then(function (products) {
+		    products.forEach(function(product) {
+		      // 标题 
+		      var productTitle = product.get('title');
+		      // 标签
+		      var productTags = product.get('tags');
+		      // 描述
+		      var productDescription = product.get('description');
+		      // 时间
+		      var releaseTime = (product.createdAt.getMonth() + 1) + '/' + product.createdAt.getDate() + '/' +  product.createdAt.getFullYear();
+		      // 发布者
+		      var ownerUsername = product.get('owner').get('username');
+		      // 产品图片
+		      var productImage = product.get('image');
+		      var productImageUrl;
+		      if (productImage) {
+		        productImageUrl = productImage.get('url');
+		      } else {
+		        productImageUrl = 'favicon.ico';
+		      }
+		      // 详情介绍
+		      var details = product.get('details');
+		      // 详情图片个数
+		      var detailsImgArrLength = product.get('detailsImgArrLength');
+		      // 获取图片详情
+		      var detailsImgArr = [];
+		      var detailsImgArrUrl = [];
+
+		      for(var i = 0; i < detailsImgArrLength; i++){
+		      	detailsImgArr.push(product.get('detailsImgArr' + i));
+		      	detailsImgArrUrl.push(product.get('detailsImgArr' + i).get('url'));
+		      }
+
+		   	  // 产品详情图片描述
+		   	  var detailsTextArr = product.get('detailsTextArr');
+
+		   	  // 数据样例图片个数
+		   	  var exampleImgArrLength =product.get('exampleImgArrLength');
+		   	  var exampleImgArr = [];
+		   	  var exampleImageUrl = [];
+		   	  for(var i = 0; i < exampleImgArrLength; i++){
+		   	  	exampleImgArr.push(product.get('exampleImgArr' + i));
+		   	  	exampleImageUrl.push(product.get('exampleImgArr' + i).get('url'))
+		   	  }
+		   	  // 数据样例图片描述
+		   	  var exampleTextArr = product.get('exampleTextArr');
+
+		      // 数据样例图片
+		      // var exampleImage = product.get('inputExample');
+		      // var exampleImageUrl;
+		      // if(exampleImage){
+		      // 	exampleImageUrl = exampleImage.get('url');
+		      // }else{
+		      // 	exampleImageUrl = 'favicon.ico';
+		      // }
+		      console.log(productImageUrl);
+		      console.log(productTitle);
+		      console.log(productTags);
+		      console.log(productDescription);
+		      console.log(ownerUsername);
+		      console.log(releaseTime);
+		      console.log(details);
+		 	  console.log(detailsImgArrUrl);			
+		      console.log(detailsTextArr);
+		      console.log(exampleImageUrl);
+		      console.log(exampleTextArr);
+
+		      context.products.push({
+		      	// 产品图片
+		      	productImageUrl,
+		      	// 产品名称
+		      	productTitle,
+		      	// 产品标签
+		      	productTags,
+		      	// 产品描述
+		      	productDescription,
+		      	// 所有者
+		      	ownerUsername,
+		      	// 提交时间
+		      	releaseTime,
+		      	// 产品详情
+		      	details,
+		      	// 产品详情图片
+		      	detailsImgArrUrl,
+		      	// 产品详情描述
+		      	detailsTextArr,
+		      	// 数据样例详情
+		      	exampleImageUrl,
+		      	// 数据样例详情描述
+		      	exampleTextArr
+		      })
+		    });
+
+		  
+		    // use handlebars to update html
+		    var source = $("#products-list").html();
+		    var template = Handlebars.compile(source);
+		    var html = template(context);
+
+		    console.log(html);
+		    
+		    $('.products-detail').html(html);
+
+
+		  }).catch(function(error) {
+		    alert(JSON.stringify(error));
+		  });
+		};
+
+		function logout() {
+		  AV.User.logOut();
+		  window.location.href = "signin.html";
+		};
+
+		$(function() {
+		  if (isCurrentUser()) {
+		    setupData();
+		  } else {
+		    window.location.href = "signin.html";
+		  }
+		});
+
+    </script>
+</body>
+</html>

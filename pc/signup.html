@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录 - 龙猫数据</title>
+	<link rel="shortcut" href="favicon.ico"  type="image/x-icon"/>
+	<link rel="icon" href="favicon.ico"  type="image/x-icon"/>
+	<link rel="bookmark" href="favicon.ico"  type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/signup.css">
+	<!-- leancloud -->
+	<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+	<script   src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src='js/initLeanCloud.js'></script>
+	<script type="text/javascript" src='js/reuseMethods.js'></script>
+</head>
+<body>
+  <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-tabs pull-right">
+            <li role="presentation"><a href="signin.html">登录</a></li>
+            <li role="presentation" class="active"><a href="#">注册</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">龙猫数据</h3>
+      </div>
+
+      <form class="form-signup">
+        <h2 class="form-signup-heading">注册新用户</h2>
+        <label for="inputUsername" class="sr-only">username</label>
+        <input type="username" id="inputUsername" class="form-control" placeholder="username" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+      </form>
+    </div> <!-- /container -->
+    <script type="text/javascript">
+    	// 注册
+    	function signup() {
+		  var username = $('#inputUsername').val();
+		  var password = $('#inputPassword').val();
+		  var email = $('inputEmail').val();
+		  
+		  // LeanCloud - 注册
+		  
+		  var user = new AV.User();
+		  user.setUsername(username);
+		  user.setPassword(password);
+		  user.setEmail(email);
+		  user.signUp().then(function (loginedUser) {
+		    window.location.href = "products.html";
+		  }, (function (error) {
+		  	alert('请输入正确的注册信息');
+		  	alert(JSON.stringify(error));
+		  }));
+		};
+
+		$(function() {
+		  $(".form-signup").on('submit', function(e) {
+		    e.preventDefault();
+		    signup();
+		  });
+		});
+
+    </script>
+</body>
+</html>
