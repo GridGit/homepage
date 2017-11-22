@@ -161,14 +161,12 @@
 
 }
 
-form{
+.form_div{
 	display: block;
 	width: 1050px;
 	margin: 0 auto;
 }
-form label{
 
-}
 .form_left div{
 	height: 44px;
 	padding-left: 10px;
@@ -214,12 +212,10 @@ form label{
 .form_relative p input{
 	margin: 0;
 	padding: 0;
-	height: 44px;
-	line-height: 44px;
+	/*-webkit-appearance:none;*/
 	display: inline-block;
 }
 .form_demand{
-	width: 714px;
 	height: 240px;
 	border: 1px solid #979797;
 	background-color: #fff;
@@ -254,9 +250,11 @@ form label{
 
 .plan_footer_banner{
 	position: relative;
+	height: 326px;
 }
 .plan_footer_banner img{
 	width: 100%;
+	height: 326px;
 }
 .footer_banner_text{
 	position: absolute;

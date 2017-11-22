@@ -32,10 +32,6 @@ a{
     color: #000;
 }
 
-.mr5{
-    margin-right: 5px;
-}
-
 body{
     background: #fafafa; 
     font-size:18px;  
@@ -50,7 +46,6 @@ header .cont{
     width: 100%;
    /* background: #212121; */
     height: 58px; 
-    display: table;
     line-height: 58px;
     padding-top:10px; 
 }
@@ -63,6 +58,10 @@ header a{
     color: rgba(256, 256, 256, 1);
 }
 
+header a:hover{
+    text-decoration: none;
+}
+
 header ul{
     float: right;
     margin-right: 30px;
@@ -73,18 +72,23 @@ header ul li{
     padding-right: 26px;
 
 }
+
 header ul li:hover{
     cursor: pointer;
+
 }
+
 header ul li a{
     color: rgba(255,255,255,0.6);
     line-height: 48px;
     font-size: 15px;
+    text-decoration: none;
 }
 
 header ul li a:hover{
     color: #F90;
     cursor: pointer;
+    text-decoration: none;
 }
 
 header ul li a.active{

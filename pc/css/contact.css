@@ -49,18 +49,12 @@ body{
     border-bottom: 1px solid gray;
 }
 .contact_type li:hover{
+    color: #FF5300;
     border-right: 5px solid #FF5300;
 }
-.contact_type li a{
-    display: inline-block;
-    width: 100%;
-    height: 25px;
-    font-size: 18px;
-    text-align: center;
-}
-.contact_type li a:hover{
-    cursor: pointer;
-    color: #FF5300;
+.li_active{
+    color:  #FF5300;
+    border-right: 5px solid #FF5300;
 }
 
 .contact_intro,.lm_contact{
@@ -72,14 +66,17 @@ body{
     background-color: #F6F6F6;
     margin-top: 40px;
     padding-top: 5px;
-    height: 146px;
+    height: 165px;
+}
+.contact_intro_item_1{
+    margin-top: 0px;
 }
 .contact_intro h3{
     
     height: 25px;
     margin-top: 15px;
     line-height: 25px;
-    padding-left: 10px;
+    padding-left: 27px;
     border-left: 5px solid #FF5300;
     color: #FF5300;
     font-size: 20px;
@@ -155,23 +152,22 @@ body{
 .contact_icon .requirementImage{
     width: 125px;
     height: 125px;
-    background-image: url(../images/businessRequirements.jpg);
+    background-image: url('http://ozlo9aly1.bkt.clouddn.com/pc/images/businessRequirements.jpg');
     background-size: contain;
 }
 .contact_icon .cooperationImage{
      width: 125px;
      height: 125px;
-     background-image: url(../images/cooperation.png);
+     background-image: url('http://ozlo9aly1.bkt.clouddn.com/pc/images/cooperation.png');
 }
 .contact_icon .businessTalksImage{
     width: 125px;
     height: 125px;
-    /*background-image: url(../images/businessTalks.png);*/
 }
 .contact_icon .appQuestionImage{
     width: 125px;
     height: 125px;
-    background-image: url(../images/appQuestion.png);
+    background-image: url('http://ozlo9aly1.bkt.clouddn.com/pc/images/appQuestion.png');
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1500px){
@@ -202,25 +198,25 @@ body{
     .contact_icon .requirementImage{
         width: 200px;
         height: 200px;
-        background-image: url(../images/businessRequirements.jpg);
+        background-image: url('http://ozlo9aly1.bkt.clouddn.com/pc/images/businessRequirements.jpg');
         background-size: contain;
     }
     .contact_icon .cooperationImage{
         width: 200px;
         height: 200px;
-        background-image: url(../images/cooperation@2x.png);
+        background-image: url('http://ozlo9aly1.bkt.clouddn.com/pc/images/cooperation@2x.png');
         background-size: contain;
     }
     .contact_icon .businessTalksImage{
         width: 200px;
         height: 200px;
-        background-image: url(../images/businessTalks@2x.png);
+        background-image: url('http://ozlo9aly1.bkt.clouddn.com/pc/images/businessTalks@2x.png');
         background-size: contain;
     }
     .contact_icon .appQuestionImage{
         width: 200px;
         height: 200px;
-        background-image: url(../images/appQuestion@2x.png);
+        background-image: url('http://ozlo9aly1.bkt.clouddn.com/pc/images/appQuestion@2x.png');
         background-size: contain;
     }
     .contact_item{

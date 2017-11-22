@@ -25,13 +25,13 @@
 	background-position: 50% 50%;
 }
 #section0{
-	background-image: url(../images/index0.jpg);
+	background-image: url('http://ozlo9aly1.bkt.clouddn.com/pc/images/index0.jpg');
 }
 #section1{
-	background-image: url(../images/index1.png);
+	background-image: url('http://ozlo9aly1.bkt.clouddn.com/pc/images/index1.png');
 }
 #section2{
-	background-image: url(../images/index2.png);
+	background-image: url('http://ozlo9aly1.bkt.clouddn.com/pc/images/index2.png');
 }
 
 /*第一个轮播*/
@@ -63,7 +63,7 @@
 /*第二个轮播*/
 .intro_section1{
 	width: 60%;
-	margin-top: 150px;
+	margin-top: 204px;
 	margin-left: 12%;	
 }
 .section1_0{
@@ -95,7 +95,7 @@
 /*第三个轮播*/
 .intro_section2{
 	width: 60%;
-	margin-top: 150px;
+	margin-top: 204px;
 	margin-left: 12%;	
 }
 .section2_0{
@@ -154,8 +154,9 @@
 	/*第二个轮播*/
 	.intro_section1{
 		width: 60%;
-		margin-top: 150px;
+		margin-top: 204px;
 		margin-left: 15%;	
+		/*margin-left: 357px;*/
 	}
 	.section1_0{
 		font-size: 44px;
@@ -185,7 +186,7 @@
 	/*第三个轮播*/
 	.intro_section2{
 		width: 60%;
-		margin-top: 150px;
+		margin-top: 204px;
 		margin-left: 15%;	
 	}
 	.section2_0{
@@ -246,7 +247,7 @@
 	/*第二个轮播*/
 	.intro_section1{
 		width: 60%;
-		margin-top: 200px;
+		margin-top: 204px;
 		margin-left: 15%;	
 	}
 	.section1_0{
@@ -277,7 +278,7 @@
 	/*第三个轮播*/
 	.intro_section2{
 		width: 60%;
-		margin-top: 200px;
+		margin-top: 204px;
 		margin-left: 15%;	
 	}
 	.section2_0{

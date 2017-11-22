@@ -1,0 +1,156 @@
+
+/*侧边栏*/
+.sidebar{
+	position: fixed;
+	bottom: 160px;
+	right: 50px;
+	height: 200px;
+	width: 50px;
+}
+
+.sidebar-item{
+	width: 50px;
+	height: 50px;
+	margin-bottom: 6px;
+	background-color: #3F7FEF;
+
+}
+.sidebar-item:hover{
+	cursor: pointer;
+}
+.sidebar-image{
+	width: 50px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-position: 10px 10px; 
+	background-color: #3F7FEF;
+}
+.image-qq{
+	background-image: url('../images/qq.png');
+}
+.image-phone{
+	background-image: url('../images/phone.png');
+}
+.image-info{
+	background-image: url('../images/info.png');
+}
+.image-returntop{
+	background-image: url('../images/returntop.png');
+}
+
+.sidebar-text{
+	display: none;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	padding: 5px 10px;
+	color: #FFFFFF;
+	background-color: #3F7FEF;
+}
+/*电话*/
+.phone-num{
+	position: fixed;
+	display: none;
+	right: 125px;
+	bottom: 260px;
+	width: 121px;
+	height: 35px;
+}
+.phone-num p{
+	display: inline-block;
+	line-height: 35px;
+	width: 100%;
+	font-size: 16px;
+	color: #FFFFFF;
+	text-align: center;
+	background: #3F7FEF;
+}
+.phone-num p.triangle{
+	display: block;
+	position: absolute;
+	top: 6px;
+	left: 121px;
+	width: 0;
+	height: 0;
+	background-color: rgba(255, 255, 255, 0);
+	border-left: 12px solid #3F7FEF;
+	border-top:12px solid rgba(255, 255, 255, 0);
+	border-bottom: 12px solid rgba(255, 255, 255, 0);
+	border-right: 12px solid rgba(255, 255, 255, 0);
+
+}
+/*定制panel*/
+.shade{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10000;
+	background-color: rgba(111, 111, 111, 0.7);
+}
+.panel{
+	width: 348px;
+	height: 417px;
+	margin: 0 auto;
+	margin-top: 15%;
+	border-radius: 6px;
+	background-color: #fff;
+}
+.panel_title{
+	width: 100%;
+	height: 86px;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	background-image: linear-gradient(-180deg, #FF9047 0%, #FF5722 100%);
+}
+.panel_title p{
+	text-align: center;
+	height: 86px;
+	line-height: 86px;
+	font-size: 18px;
+	color: #FFFFFF;
+}
+.panel div{
+	text-align: center;
+}
+.panel label{
+	display: inline-block;
+	font-size: 16px;
+	line-height: 22px;
+	margin: 20px 0 10px 10px;
+}
+.panel textarea{
+	width: 308px;
+	height: 98px;
+}
+.panel input{
+	width: 308px;
+	height: 36px;
+}
+.panel_btn{
+	width: 100%;
+	height: 58px;
+	margin-top: 20px;
+	border-top: 3px solid #EBEBEB; 
+}
+
+.panel_btn button:nth-child(1){
+	margin-right: 20px;
+}
+.panel_btn button:hover{
+	cursor: pointer;
+}
+.btn{
+	margin-top: 10px;
+	width: 100px;
+	height: 30px;
+	border-radius: 5px;
+}
+.btn-success{
+	background-color: rgb(252, 81, 35);
+}
+.btn-danger{
+	background-color: rgb(234, 157, 62);
+}
+

@@ -45,15 +45,15 @@
 
 				me.canscroll = true;
 
-				setInterval(function(e){
+				// setInterval(function(e){
 
-					if(me.index < me.pagesCount){
-						me.index ++;
-					}else if(me.settings.loop){
-						me.index = 0;
-					}
-					me._scrollPage();
-				}, 5000);
+				// 	if(me.index < me.pagesCount){
+				// 		me.index ++;
+				// 	}else if(me.settings.loop){
+				// 		me.index = 0;
+				// 	}
+				// 	me._scrollPage();
+				// }, 5000);
 				
 				if(!me.direction || me.index){
 					me._initLayout();

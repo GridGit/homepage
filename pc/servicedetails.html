@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>产品服务-龙猫数据-人工智能大数据服务提供商</title>
+<title>产品详情-龙猫数据-人工智能大数据服务提供商</title>
 <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
 <link rel="stylesheet" type="text/css" href="css/base.css">
 <link rel="stylesheet" type="text/css" href="css/service.css">
@@ -61,11 +61,11 @@ var _hmt = _hmt || [];
   	  window.location.href = "http://m.longmaosoft.com";
   }
 </script>
+
 </head>
 <body>
 <header>
   <div class="cont">
-
     <a href="index.html"><img id="icon" src="http://ozlo9aly1.bkt.clouddn.com/pc/images/logo.png">龙猫数据</a>
     <ul>
       <li><a href="index.html">首页</a></li>
@@ -85,36 +85,68 @@ var _hmt = _hmt || [];
 		<p>专业的团队高效、稳定提供数据标注服务</p>
 	</div>
 </div>
-<div class="service_search">
-	<div class="search_wrap">
-		<input type="text" name="" class="search_input" placeholder="请输入您需要的产品服务" autofocus="true"><span class="search_cut"></span><span class="search_text">搜索</span>	
-	</div>
-	
+<div class="details" >
+	<script id="detail_item" type="text/x-handlebars-template">
+		 {{#each products}}
+          <div class="detail"  style="display: none;">
+          	<div class="crumbs"><a href="service.html" class="product_service">产品服务</a><span>/</span><a href="#">{{{productTitle}}}</a></div>
+          	<div class="detail_top">
+          		<div class="detail_top_img"><img src={{productImageUrl}}></div>
+          		<div class="detail_top_text">
+          			<h3>{{{productTitle}}}</h3>
+          			<div>
+						{{# productTags}}
+	                	<span>{{{this}}}</span>
+	                	{{/ productTags}} 
+					</div>
+					<p>{{{productDescription}}}</p>
+					<div><span  class="span_btn data_creation">数据定制</span><a target="_blank" href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODE5NjczMF80NzcxODFfNDAwMDAwNzE5MF8yXw"><span class='span_btn'>咨询客服</span></a></div>
+          		</div>
+          	</div>
+          	<div class="detail_middle">
+          		<span class="detail_introduce_btn ">详情介绍</span><span class="detail_example_btn">数据样例</span>
+          	</div>
+          	<div class="detail_bottom">
+          		<div class="detail_introduce">
+          			<h4>详情介绍</h4>
+					<p>{{{details}}}</p>
+					<h4>产品优势</h4>
+					<p>{{{superiorityText}}}</p>
+					<h4>适用范围</h4>
+					<p>{{{scopeText}}}</p>
+					<h4>数据格式</h4>
+					<p>{{{formatText}}}</p>
+					<div>
+						{{# detailsImgArrUrl}}
+						<h4>详情图片</h4>
+						<img src={{this}}>
+						{{/ detailsImgArrUrl}}
+					</div>
+					<div>
+						{{# detailsTextArr}}
+						<p>{{{this}}}</p>
+						{{/ detailsTextArr}}
+					</div>
+				</div>
+				<div class="detail_example" style="display: none;">
+					<div>
+						{{# exampleImageUrl}}
+						<h4>数据样例图片</h4>
+						<img src={{this}} />
+						{{/ exampleImageUrl}}
+					</div>
+					<div>
+						{{# exampleTextArr}}
+						<p>{{{this}}}</p>
+						{{/ exampleTextArr}}
+					</div>
+				</div>
+          	</div>
+          </div>
+          {{/each}}
+	</script>
 </div>
-<div class="main serveice_main" >
-	<div class="service_wrap " >
-		
-	</div>
-</div>
-<!-- Products list content -->
-<script id="products-list" type="text/x-handlebars-template">
-  {{#each products}}
-  <div class="service_item_wrap">
-      <div class="service_item">
-      	<div class="service_img"><img src={{productImageUrl}}></div>
-		<div class="service_text">
-			<h3>{{productTitle}}</h3>
-			<p>{{productDescription}}</p>
-			<div>
-				{{# productTags}}
-            	<span>{{{this}}}</span>
-            	{{/ productTags}} 
-			</div>
-		</div>
-      </div>
-   </div>
-  {{/each}}
-</script>
+
 <!-- 侧边栏 -->
 <div class="sidebar" >
 	<div class="sidebar-item">
@@ -167,6 +199,6 @@ var _hmt = _hmt || [];
 </footer>
 
 <script type="text/javascript" src="js/blocksit.min.js"></script>
-<script type="text/javascript" src='js/service.js'></script>
+<script type="text/javascript" src='js/servicedetails.js'></script>
 </body>
 </html>

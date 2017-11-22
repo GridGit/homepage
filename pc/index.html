@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="css/base.css">
 <link rel="stylesheet" type="text/css" href="css/home.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/sidebar.css">
 
 <link rel="shortcut" href="favicon.ico"  type="image/x-icon"/>
 <link rel="icon" href="favicon.ico"  type="image/x-icon"/>
@@ -14,13 +15,22 @@
 <meta name="keywords" content="大数据,数据采集,数据标注,图像数据,语音数据,视频数据,文本数据,数据定制,人工智能数据,大数据平台">
 <meta name="description" content="龙猫数据专业的AI人工智能数据服务提供商。致力于人工智能大数据采集、数据标注、数据提取、数据校验、数据清洗、线上众包等服务。数据服务热线：400-0007190">
 
+<!-- leancloud -->
+<!-- avjs -->
+<script src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+<!-- jquery -->
+<script   src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<!-- bootstrapjs -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!--  -->
+<script type="text/javascript" src='js/initLeanCloud.js'></script>
+<script type="text/javascript" src='js/reuseMethods.js'></script>
 
-<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src='js/bootstrap.min.js'></script>
+
 <script src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src='js/common.js'></script>
-<script type="text/javascript" src='js/pageswitch.js'></script> 
+<script type="text/javascript" src='js/pageswitch.js'></script>
+<script type="text/javascript" src='js/sidebar.js'></script> 
 <!-- 百度统计 -->
 <script>
 	var _hmt = _hmt || [];
@@ -67,13 +77,13 @@
 	</div>
   </div> -->
   <div class="cont">
-     <a id="index_a" href="index.html"><img id="icon" src="images/logo.png">龙猫数据</a>
+     <a id="index_a" href="index.html"><img id="icon" src="http://ozlo9aly1.bkt.clouddn.com/pc/images/logo.png">龙猫数据</a>
      <ul>
 	      <li class="current"><a href="index.html">首页</a></li>
 	      <li><a href="service.html">产品服务</a></li>
 	      <li><a href="solutions.html">行业方案</a></li>
 	      <li><a href="serviceplan.html">免费计划</a></li>
-	      <li><a href="contact.html">联系我们</a></li>
+	      <li><a href="contact.html">关于我们</a></li>
      </ul>
   </div>
 </header>
@@ -242,6 +252,44 @@
 		</div>
 	</div>
 </div>
+<!-- 侧边栏 -->
+<div class="sidebar" >
+	<div class="sidebar-item">
+		<div class="image-qq sidebar-image"></div>
+		<div class="sidebar-text">客服QQ</div>	
+	</div>
+	<div class="sidebar-item">
+		<div class="image-phone sidebar-image"></div>
+		<div class="sidebar-text">联系我们</div>
+	</div>
+	<div class="sidebar-item">
+		<div class="image-info sidebar-image"></div>
+		<div class="sidebar-text" >数据定制</div>
+	</div>
+	<div class="sidebar-item">
+		<div class="image-returntop sidebar-image"></div>
+		<div class="sidebar-text" >返回顶部</div>
+	</div>
+</div>
+<!-- 电话 -->
+<div class="phone-num">
+	<p>400-0007190</p>
+	<p class="triangle"></p>
+</div>
+<!-- 定制数据弹窗 -->
+<div class="shade" style="display: none;">
+	<div class="panel">
+		<div class="panel_title"><p>个性化定制</p></div>
+		<form class="panel_form" id="panel_form">
+			<label>需求描述</label>
+			<div><textarea class="requirement_description" placeholder="请填写您的需求描述" required='true'></textarea></div>
+			<label>手机号码</label>
+			<div><input type="telephone" id="telephoneNumber" placeholder="请填写您的手机号码" required='true'></div>
+			<div class="panel_btn"><button type='submit' class="btn btn-success panel_submit" >提交</button><button class="panel_cancel btn btn-danger">取消</button></div>
+		</form>
+	</div>
+</div>
+
 <footer>
 	<div class="footer_href">
 		<ul>

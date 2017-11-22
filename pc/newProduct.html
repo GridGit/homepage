@@ -39,7 +39,6 @@
 	        <textarea type='description' id="inputDescription" class="form-control" placeholder="产品描述" required="true"></textarea>
 			<label for="inputFile">产品图片描述</label>
 			<input type="file" id="inputImg" class="form-control" placeholder="上传图片" accept = 'image/*'/>
-
       	</div>
       	<div class="info-section">
 	      	<div class="product-details-wrap">
@@ -63,31 +62,22 @@
 				<span class="btn btn-xs btn-success" id="addDataExample">添加数据样例</span>
 			</div>
       	</div>
-		
-		
-
         <div class="operate">
         	<button class="btn btn-lg btn-success " type="submit">发布</button>
         	<button class="btn btn-lg btn-primary " id="return">返回</a></button>
-        </div>
-       
+        </div>       
       </form>
     </div> <!-- /container -->
     <script type="text/javascript">
-
-    	
-
     	// 添加详情图片
     	$('#addDetailsImg').on('click', function(e){
     		e.stopPropagation();
     		e.preventDefault();
-    		
     		var html = '<label>详情图片<label/>'	
     				+ '<input type="file" class="form-control inputDetailsImg" placeholder="详情图片" accept="image/*" />'
     				+ '<labe>详情图片描述</label><input type="text" placeholder="详情图片描述" class="form-control inputDetailsText">'
 
     		$('.product-details-wrap').append(html);
-
     	})
     	// 添加数据样例
     	$('#addDataExample').on('click', function(e){
@@ -105,7 +95,6 @@
 
     	// 发布新产品
     	var Product = AV.Object.extend('Product');
-
 		function releaseNewProduct() {
 		  // 产品名称
 		  var title = $('#inputTitle').val();
@@ -241,7 +230,7 @@
 		    	window.location.href = 'products.html';
 		    });
 
-		  } else {
+		  }else {
 		    window.location.href = "login.html";
 		  }
 		});
