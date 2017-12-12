@@ -1,15 +1,14 @@
 // handlebars context
-var context = {
-  products: [],
-  details: []
-};
+
 
 function setupData() {
   // LeanCloud - 查询
   var query = new AV.Query('Product');
   query.include('owner');
   query.include('image');
-  query.descending('createdAt');
+  query.ascending('num_id');
+  query.addDescending('createdAt');
+  
   query.find().then(function (products) {
     products.forEach(function(product) {
       // 产品名称 
@@ -42,16 +41,11 @@ function setupData() {
       	detailsImgArr.push(product.get('detailsImgArr' + i));
       	detailsImgArrUrl.push(product.get('detailsImgArr' + i).get('url'));
       }
+      // 样例图片不存在
+      if(detailsImgArrUrl.length == 0){
+        detailsImgArrUrl = ['']
+      }
 
-   	  // 产品详情图片描述
-   	  var detailsTextArr = product.get('detailsTextArr');
-   	  var detailsAll = []
-   	  for(var i = 0; i < detailsImgArrUrl.length; i++){
-   	  	var obj = {};
-   	  	obj.detailsImgArrUrl = detailsImgArrUrl[i];
-   	  	obj.detailsTextArr = detailsTextArr[i];
-   	  	detailsAll.push(obj);
-   	  }
    	  // 数据样例图片个数
    	  var exampleImgArrLength =product.get('exampleImgArrLength');
    	  var exampleImgArr = [];
@@ -60,16 +54,12 @@ function setupData() {
    	  	exampleImgArr.push(product.get('exampleImgArr' + i));
    	  	exampleImageUrl.push(product.get('exampleImgArr' + i).get('url'))
    	  }
-   	  // 数据样例图片描述
-   	  var exampleTextArr = product.get('exampleTextArr');	 
-   	  var exampleAll = []
-   	  for(var i = 0; i < exampleImageUrl.length; i++){
-   	  	var obj = {}
-   	  	obj.exampleImageUrl = exampleImageUrl[i];
-   	  	obj.exampleTextArr = exampleTextArr[i];
-   	  	exampleAll.push(obj);
-   	  }
 
+      // 数据图片不存在
+      if(exampleImageUrl.length == 0){
+        exampleImageUrl = [''];
+      }
+  
       // 解析产品详情
       // 产品优势
       var indexSuperiority = details.indexOf('产品优势:');
@@ -121,59 +111,120 @@ function setupData() {
       	// exampleAll
       	// 产品详情图片
       	detailsImgArrUrl,
-      	// 产品详情描述
-      	detailsTextArr,
       	// 数据样例详情
-      	exampleImageUrl,
-      	// 数据样例详情描述
-      	exampleTextArr
+      	exampleImageUrl
       })
     });  
     // 详情页
     var source2 = $("#detail_item").html();
     var template2= Handlebars.compile(source2);
     var html2 = template2(context);
-    $('.details').html(html2);   
+    $('.details').html(html2);
+    context = JSON.stringify(context)
+  
+    sessionStorage.setItem('detailsContext', context); 
+    
   }).catch(function(error) {
     alert(JSON.stringify(error));
   });
 };
+var context = JSON.parse(sessionStorage.getItem('detailsContext'));
+if(context && context.products && context.products.length != 0){
+    // 详情页
+    var source2 = $("#detail_item").html();
+    var template2= Handlebars.compile(source2);
+    var html2 = template2(context);
+    $('.details').html(html2); 
 
-setupData();
 
-window.setTimeout(function(){
+    // 具体产品索引
+    var index = window.location.href.split('#')[1];
+    
+    // 如果没有锚点，默认为第一个
+    if(typeof index == 'undefined'){
+      index = 0;
+    }
 
-  // 具体产品索引
-	var index = window.location.href.split('#')[1];
-  var indexDetailDom = $('.detail')[index];
-  $(indexDetailDom).fadeIn();
-  $('.detail_middle span').removeClass('introduce_example_active');
-  $('.detail_introduce_btn').addClass('introduce_example_active');
-	// 需求定制
-	$('.data_creation').on('click', function(e){
-		$('.shade').css('display', 'block');
-	})	
-	// 详情介绍&数据样例
-	$('.detail_introduce_btn').on('click',function(e){
-		e.stopPropagation();
-		e.preventDefault();	
 
-		$('.detail_middle span').removeClass('introduce_example_active');
-		$('.detail_introduce_btn').addClass('introduce_example_active');
+    var indexDetailDom = $('.detail')[index];
+    $(indexDetailDom).fadeIn();
+    $('.detail_middle span').removeClass('introduce_example_active');
+    $('.detail_introduce_btn').addClass('introduce_example_active');
+    // 需求定制
+    $('.data_creation').on('click', function(e){
+      $('.shade').css('display', 'block');
+    })  
+    // 详情介绍&数据样例
+    $('.detail_introduce_btn').on('click',function(e){
+      e.stopPropagation();
+      e.preventDefault(); 
 
-		$('.detail_introduce').fadeIn();
-		$('.detail_example').fadeOut();
-	})
+      $('.detail_middle span').removeClass('introduce_example_active');
+      $('.detail_introduce_btn').addClass('introduce_example_active');
 
-	$('.detail_example_btn').on('click', function(e){
-		e.stopPropagation();
-		e.preventDefault();
+      $('.detail_introduce').fadeIn();
+      $('.detail_example').fadeOut();
+    })
 
-		$('.detail_middle span').removeClass('introduce_example_active');
-		$('.detail_example_btn').addClass('introduce_example_active');
+    $('.detail_example_btn').on('click', function(e){
+      e.stopPropagation();
+      e.preventDefault();
 
-		$('.detail_introduce').fadeOut();
-		$('.detail_example').fadeIn();
-	})
+      $('.detail_middle span').removeClass('introduce_example_active');
+      $('.detail_example_btn').addClass('introduce_example_active');
 
-},500)
+      $('.detail_introduce').fadeOut();
+      $('.detail_example').fadeIn();
+    }) 
+}else {
+  context = {
+    products: [],
+    details: []
+  };
+  
+  setupData();
+  window.setTimeout(function(){
+
+    // 具体产品索引
+    var index = window.location.href.split('#')[1];
+    
+    // 如果没有锚点，默认为第一个
+    if(typeof index == 'undefined'){
+      index = 0;
+    }
+
+
+    var indexDetailDom = $('.detail')[index];
+    $(indexDetailDom).fadeIn();
+    $('.detail_middle span').removeClass('introduce_example_active');
+    $('.detail_introduce_btn').addClass('introduce_example_active');
+    // 需求定制
+    $('.data_creation').on('click', function(e){
+      $('.shade').css('display', 'block');
+    })  
+    // 详情介绍&数据样例
+    $('.detail_introduce_btn').on('click',function(e){
+      e.stopPropagation();
+      e.preventDefault(); 
+
+      $('.detail_middle span').removeClass('introduce_example_active');
+      $('.detail_introduce_btn').addClass('introduce_example_active');
+
+      $('.detail_introduce').fadeIn();
+      $('.detail_example').fadeOut();
+    })
+
+    $('.detail_example_btn').on('click', function(e){
+      e.stopPropagation();
+      e.preventDefault();
+
+      $('.detail_middle span').removeClass('introduce_example_active');
+      $('.detail_example_btn').addClass('introduce_example_active');
+
+      $('.detail_introduce').fadeOut();
+      $('.detail_example').fadeIn();
+    })
+  },500)  
+}
+
+

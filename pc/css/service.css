@@ -3,14 +3,12 @@ body{
 }
 .service_search{
 	width: 1200px;
-	height: 96px;
 	margin: 0 auto;
-	
 }
 .search_wrap{
 	position: relative;
-	margin-top: 29px;
-
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 .search_input{
 	display: inline-block;
@@ -20,15 +18,16 @@ body{
 	width: 430px;
 	height: 37px;
 	line-height: 14px;
-	text-indent: 50px;
+	text-indent: 40px;
 	font-size: 14px;
 	border-left: 1px solid #FF5300;
 	border-top: 1px solid #FF5300;
 	border-bottom: 1px solid #FF5300;
 	border-top-left-radius: 2px;
 	border-bottom-left-radius: 2px;
-	background-image: url('../images/search.png');
-	background-position: 5px center;
+	background-image: url('http://p02hchp62.bkt.clouddn.com/pc/images/search.png');
+	background-size: 14px;
+	background-position: 10px center;
 	background-repeat: no-repeat;
 	-webkit-appearance:none;
 }
@@ -39,7 +38,7 @@ body{
 	display: inline-block;
 	width: 2px;
 	height: 23px;
-	background-color: #979797;
+	background-color: #FF5300;
 	
 }
 .search_text{
@@ -145,8 +144,6 @@ body{
 	font-size: 14px;
 	color: #666666 ;
 	font-weight: normal;
-	font-family: "Microsoft YaHei", "微软雅黑",  "Times New Roman",Georgia,Serif;
-
 }
 .service_text span{
 	display: inline-block;
@@ -185,7 +182,16 @@ body{
 .crumbs a:hover{
 	color: #FF5300;
 }
-
+.loading{
+	position: fixed;
+	width: 64px;
+	height: 64px;
+	top: 70%;
+	left: 50%;
+	transform: translateX(-32px);
+	transform: translateY(-32px);
+	background-image: url('http://p02hchp62.bkt.clouddn.com/pc/images/server_loading.gif');
+}
 
 
 .detail_top_img{
@@ -252,11 +258,21 @@ body{
 .detail_middle{
 	height: 64px;
 	width: 100%;
-	margin: 52px 0 27px;
+	margin: 52px 0 0;
 	box-sizing: border-box;
 	background: #F7F7FA;
 	border: 1px solid #CFD8DE;
 
+}
+.detail_bottom{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	box-sizing: border-box;
+	border-left: 1px solid #CFD8DE;
+	border-bottom: 1px solid #CFD8DE;
+	border-right: 1px solid #CFD8DE;
+
+	/*background-color: orange;*/
 }
 .detail_introduce_btn, .detail_example_btn{
 	display: inline-block;
@@ -274,7 +290,7 @@ body{
 }
 
 .detail_introduce p,.detail_introduce h4, .detail_example p{
-	margin-top: 30px;
+	/*margin-top: 30px;*/
 	margin-bottom: 30px;
 	margin-left: 50px;
 	line-height: 30px;
@@ -303,4 +319,10 @@ body{
 }
 .detail_example div img{
 	display: block;
+}
+/*分页*/
+.pagination_wrap{
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
 }

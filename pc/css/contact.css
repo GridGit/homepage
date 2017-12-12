@@ -72,7 +72,7 @@ body{
     margin-top: 0px;
 }
 .contact_intro h3{
-    
+
     height: 25px;
     margin-top: 15px;
     line-height: 25px;
@@ -87,10 +87,10 @@ body{
     padding-top: 20px;
     padding-left: 30px;
     padding-right: 20px;
-    line-height: 25px;
+    line-height: 30px;
     color: #333333;
     border-top: 1px solid #E3E3E3;
-    font-size: 18px;
+    font-size: 14px;
 }
 .lm_contact{
     margin-top: 10px;
@@ -113,7 +113,7 @@ body{
     border-top: 2px solid rgb(229,229,229);
 
 }
-.contact_content_detail{ 
+.contact_content_detail{
     color: #333333;
 }
 .contact_content_detail .content_title{
@@ -179,7 +179,7 @@ body{
     }
     .contact_banner p{
         margin-top: 20px;
-        font-size: 32px;   
+        font-size: 32px;
     }
 }
 @media screen and (max-width: 1200px){

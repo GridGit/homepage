@@ -26,16 +26,16 @@
 	background-color: #3F7FEF;
 }
 .image-qq{
-	background-image: url('../images/qq.png');
+	background-image: url('http://p02hchp62.bkt.clouddn.com/pc/images/qq.png');
 }
 .image-phone{
-	background-image: url('../images/phone.png');
+	background-image: url('http://p02hchp62.bkt.clouddn.com/pc/images/phone.png');
 }
 .image-info{
-	background-image: url('../images/info.png');
+	background-image: url('http://p02hchp62.bkt.clouddn.com/pc/images/info.png');
 }
 .image-returntop{
-	background-image: url('../images/returntop.png');
+	background-image: url('http://p02hchp62.bkt.clouddn.com/pc/images/returntop.png');
 }
 
 .sidebar-text{
@@ -87,7 +87,7 @@
 	width: 100%;
 	height: 100%;
 	z-index: 10000;
-	background-color: rgba(111, 111, 111, 0.7);
+	background-color: rgba(255, 255, 255, 0.7);
 }
 .panel{
 	width: 348px;
@@ -111,46 +111,39 @@
 	font-size: 18px;
 	color: #FFFFFF;
 }
-.panel div{
-	text-align: center;
-}
-.panel label{
-	display: inline-block;
-	font-size: 16px;
-	line-height: 22px;
-	margin: 20px 0 10px 10px;
-}
-.panel textarea{
-	width: 308px;
-	height: 98px;
-}
-.panel input{
-	width: 308px;
-	height: 36px;
-}
-.panel_btn{
-	width: 100%;
-	height: 58px;
+.shade form div,.shade form div label,.shade form div textarea,.shade form div input{
 	margin-top: 20px;
-	border-top: 3px solid #EBEBEB; 
+}
+.shade form div label{
+	font-size: 14px;
+}
+.shade form div textarea#requirement_description{
+	height: 70px;
 }
 
-.panel_btn button:nth-child(1){
-	margin-right: 20px;
+/*提示框*/
+.tip-panel{
+	display: none;
+	position: fixed;
+	z-index: 99999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(111, 111, 111, 0.8);	
 }
-.panel_btn button:hover{
-	cursor: pointer;
-}
-.btn{
-	margin-top: 10px;
-	width: 100px;
-	height: 30px;
-	border-radius: 5px;
-}
-.btn-success{
-	background-color: rgb(252, 81, 35);
-}
-.btn-danger{
-	background-color: rgb(234, 157, 62);
+.tip-panel p{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 100px;
+	color: rgba(255, 0, 0, 0.9);
+	text-align: center;
+	font-size: 30px;
+	line-height: 100px;
+	border-radius: 10px;
+	background-color: rgb(99, 169, 97);
+	transform: translate(-200px, -50px);
 }
 

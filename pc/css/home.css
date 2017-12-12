@@ -13,6 +13,7 @@ body{
 /*轮播图wrap*/
 .index_wrap{
 	height: 700px;
+	/*height: 100%;*/
 	position: relative;
 	width: 100%;
 }
@@ -34,7 +35,6 @@ body{
 	margin: 70px auto 100px;
 	color: #212121;
 	text-align: center;
-	font-family:"Microsoft YaHei", "微软雅黑","Times New Roman",Georgia,Serif;
 	font-size: 36px;
 	letter-spacing: 0;
 }
@@ -64,7 +64,7 @@ body{
 	background-image: url('http://ozlo9aly1.bkt.clouddn.com/pc/images/Bitmap0.png');
 }
 .service_img1{
-	background-image: url('http://ozlo9aly1.bkt.clouddn.com/pc/images/Bitmap1.png');
+	background-image: url('http://p02hchp62.bkt.clouddn.com//pc/images/index_4_2.png');
 }
 .service_img2{
 	background-image: url('http://ozlo9aly1.bkt.clouddn.com/pc/images/Bitmap2.png');

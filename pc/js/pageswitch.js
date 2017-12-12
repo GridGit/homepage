@@ -29,7 +29,6 @@
 			this.element = element;
 			this.init();
 		}
-
 		PageSwitch.prototype = {
 			/*说明：初始化插件*/
 			/*实现：初始化dom结构，布局，分页及绑定事件*/
@@ -45,15 +44,15 @@
 
 				me.canscroll = true;
 
-				// setInterval(function(e){
+				setInterval(function(e){
 
-				// 	if(me.index < me.pagesCount){
-				// 		me.index ++;
-				// 	}else if(me.settings.loop){
-				// 		me.index = 0;
-				// 	}
-				// 	me._scrollPage();
-				// }, 5000);
+					if(me.index < me.pagesCount){
+						me.index ++;
+					}else if(me.settings.loop){
+						me.index = 0;
+					}
+					me._scrollPage();
+				}, 5000);
 				
 				if(!me.direction || me.index){
 					me._initLayout();

@@ -25,7 +25,7 @@
 	background-position: 50% 50%;
 }
 #section0{
-	background-image: url('http://ozlo9aly1.bkt.clouddn.com/pc/images/index0.jpg');
+	background-image: url('http://p02hchp62.bkt.clouddn.com//pc/images/index0.png');
 }
 #section1{
 	background-image: url('http://ozlo9aly1.bkt.clouddn.com/pc/images/index1.png');
@@ -38,28 +38,64 @@
 .intro_section0{
 	width: 800px;
 	margin: 0 auto;
-	margin-top: 500px;
-	font-family: "Microsoft YaHei", "微软雅黑",  "Times New Roman",Georgia,Serif;
+	margin-top: 115px;
 	overflow: hidden;
 }
-.intro_section0 div{
-	display: inline-block;
-	width: 195px;
+.intro_section0 h3.h3_left{
+	margin-top: 50px;
+	font-size: 100px;
+	font-style: italic;
+	color: #fff;
+	text-align: left;
+	-ms-transform:rotate(-9deg); /* Internet Explorer */
+	-moz-transform:rotate(-9deg); /* Firefox */
+	-webkit-transform:rotate(-9deg); /* Safari 和 Chrome */
+	-o-transform:rotate(-9deg); /* Opera */
+	transform:rotate(-9deg);
 }
-.intro_section0 p{
-	font-size: 14px;
+.intro_section0 h3.h3_right{
+	font-size: 100px;
+	font-style: italic;
+	color: #fff;
+	margin-left: 300px;
 	text-align: center;
-	height: 20px;
-	line-height: 20px;
+	-ms-transform:rotate(-9deg); /* Internet Explorer */
+	-moz-transform:rotate(-9deg); /* Firefox */
+	-webkit-transform:rotate(-9deg); /* Safari 和 Chrome */
+	-o-transform:rotate(-9deg); /* Opera */
+	transform:rotate(-9deg);
 }
-.intro_section0 span{
+.intro_section0 .text-wrap{
+	margin: 0 auto;
+	width: 800px;
+	/*background-color: orange;*/
+}
+.intro_section0 .text-wrap p{
 	display: inline-block;
-	width: 100%;
+	width: 24%;
+	font-size: 24px;
+	-webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+	box-sizing: border-box;
 	text-align: center;
-	font-size: 10px;
-	height: 15px;
-	line-height: 15px;
 }
+.intro_section0 div.button{
+	display: inline-block;
+	width: 300px;
+	height: 60px;
+	margin-top: 100px;
+	margin-left: 250px;
+	line-height: 60px;
+	font-size: 28px;
+	text-align: center;
+	border-radius: 30px;
+	color: #000;
+	background-color: #fff;
+}
+.intro_section0 div.button:hover{
+	color:  #FF5300;
+}
+
 /*第二个轮播*/
 .intro_section1{
 	width: 60%;
@@ -130,28 +166,50 @@
 	.intro_section0{
 		width: 800px;
 		margin: 0 auto;
-		margin-top: 500px;
-		font-family: "Microsoft YaHei", "微软雅黑",  "Times New Roman",Georgia,Serif;
+		margin-top: 115px;
 	}
-	.intro_section0 div{
-		display: inline-block;
-		width: 195px;
+	.intro_section0 h3.h3_left{
+		margin-top: 50px;
+		font-size: 100px;
+		font-style: italic;
+		color: #fff;
+		text-align: left;
+		-ms-transform:rotate(-9deg); /* Internet Explorer */
+		-moz-transform:rotate(-9deg); /* Firefox */
+		-webkit-transform:rotate(-9deg); /* Safari 和 Chrome */
+		-o-transform:rotate(-9deg); /* Opera */
+		transform:rotate(-9deg);
 	}
-	.intro_section0 p{
-		font-size: 18px;
+	.intro_section0 h3.h3_right{
+		font-size: 100px;
+		font-style: italic;
+		color: #fff;
+		margin-left: 300px;
 		text-align: center;
-		height: 25px;
-		line-height: 25px;
+		-ms-transform:rotate(-9deg); /* Internet Explorer */
+		-moz-transform:rotate(-9deg); /* Firefox */
+		-webkit-transform:rotate(-9deg); /* Safari 和 Chrome */
+		-o-transform:rotate(-9deg); /* Opera */
+		transform:rotate(-9deg);
 	}
-	.intro_section0 span{
+	.intro_section0 div.button{
 		display: inline-block;
-		width: 100%;
+		width: 300px;
+		height: 60px;
+		margin-top: 100px;
+		margin-left: 250px;
+		line-height: 60px;
+		font-size: 30px;
 		text-align: center;
-		font-size: 14px;
-		height: 20px;
-		line-height: 20px;
+		border-radius: 30px;
+		color: #000;
+		background-color: #fff;
 	}
-	/*第二个轮播*/
+	.intro_section0 div.button:hover{
+		color:  #FF5300;
+	}
+	
+ 	/*第二个轮播*/
 	.intro_section1{
 		width: 60%;
 		margin-top: 204px;
@@ -222,27 +280,47 @@
 	.intro_section0{
 		width: 800px;
 		margin: 0 auto;
-		margin-top: 500px;
-		font-family: "Microsoft YaHei", "微软雅黑",  "Times New Roman",Georgia,Serif;
+		margin-top: 115px;
 	}
-	.intro_section0 div{
-		display: inline-block;
-		width: 196px;
+	.intro_section0 h3.h3_left{
+		margin-top: 50px;
+		font-size: 100px;
+		font-style: italic;
+		color: #fff;
+		text-align: left;
+		-ms-transform:rotate(-9deg); /* Internet Explorer */
+		-moz-transform:rotate(-9deg); /* Firefox */
+		-webkit-transform:rotate(-9deg); /* Safari 和 Chrome */
+		-o-transform:rotate(-9deg); /* Opera */
+		transform:rotate(-9deg);
 	}
-	
-	.intro_section0 p{
-		font-size: 22px;
+	.intro_section0 h3.h3_right{
+		font-size: 100px;
+		font-style: italic;
+		color: #fff;
+		margin-left: 300px;
 		text-align: center;
-		height: 30px;
-		line-height: 30px;
+		-ms-transform:rotate(-9deg); /* Internet Explorer */
+		-moz-transform:rotate(-9deg); /* Firefox */
+		-webkit-transform:rotate(-9deg); /* Safari 和 Chrome */
+		-o-transform:rotate(-9deg); /* Opera */
+		transform:rotate(-9deg);
 	}
-	.intro_section0 span{
+	.intro_section0 div.button{
 		display: inline-block;
-		width: 100%;
+		width: 300px;
+		height: 60px;
+		margin-top: 100px;
+		margin-left: 250px;
+		line-height: 60px;
+		font-size: 35px;
 		text-align: center;
-		font-size: 18px;
-		height: 25px;
-		line-height: 25px;
+		border-radius: 30px;
+		color: #000;
+		background-color: #fff;
+	}
+	.intro_section0 div.button:hover{
+		color:  #FF5300;
 	}
 	/*第二个轮播*/
 	.intro_section1{

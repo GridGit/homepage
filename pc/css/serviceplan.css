@@ -1,3 +1,9 @@
+header #cont{
+	height: 68px;
+}
+a:hover{
+	color: #ffff;
+}
 .service_plan_banner{
 	position: relative;
 }
@@ -30,7 +36,7 @@
 	text-align: center;
 }
 .text_wrap p span{
-	color: red;
+	color: #FFFE00;
 	margin-left: 5px;
 }
 .service-plan-wrap{
@@ -142,6 +148,7 @@
 	margin-top: 126px;
 	background-color: #f5f5f5;
 }
+/*表单样式*/
 .form_wrap {
 	position: absolute;
 	top: 76px;
@@ -156,97 +163,14 @@
 	line-height: 50px;
 	text-align: center;
 }
-.form_wrap .form_left{
-	display: inline-block;
-
+/*提示信息*/
+.tip-text{
+	display: none;
+	font-size: 12px;
+	color: red;
+	height: 34px;
+	line-height: 26px;
 }
-
-.form_div{
-	display: block;
-	width: 1050px;
-	margin: 0 auto;
-}
-
-.form_left div{
-	height: 44px;
-	padding-left: 10px;
-	line-height: 44px;
-	vertical-align: top;
-	width: 279px;
-	border: 1px solid #979797;
-	margin-bottom: 20px;
-	background-color: #fff;
-}
-
-.form_left div input{
-	display: inline-block;
-	height: 37px;
-	line-height: 37px;
-	outline: none;
-	border: none;
-	border-color: #f5f5f5;
-
-
-}
-.form_wrap .form_right{
-	display: inline-block;
-	margin-left: 40px;
-}
-/*称谓*/
-.form_relative{
-	position: relative;
-}
-
-.form_relative p{
-	display: inline-block;
-	height: 44px;
-	line-height: 44px;
-	margin-left: 10px;
-}
-.form_relative .no_left{
-	margin-left: 0;
-} 
-.form_relative p{
-	vertical-align: top;
-}
-.form_relative p input{
-	margin: 0;
-	padding: 0;
-	/*-webkit-appearance:none;*/
-	display: inline-block;
-}
-.form_demand{
-	height: 240px;
-	border: 1px solid #979797;
-	background-color: #fff;
-}
-.form_demand div{
-	margin-top: 10px;
-	margin-left: 10px;
-	display: inline-block;
-}
-.form_demand textarea{
-	width: 620px;
-	height: 220px;
-	
-	outline: none;
-	border: none;
-}
-
-.submit{
-	width: 110px;
-	height: 38px;
-	line-height: 38px;
-	text-align: center;
-	margin-left: 900px;
-	margin-top: 27px;
-	font-size: 18px;
-	background: #FF5300;
-	border-radius: 2px;
-	color: #ffffff;
-	cursor: pointer;
-}
-
 
 .plan_footer_banner{
 	position: relative;
@@ -281,7 +205,8 @@
 	display: inline-block;
 	background-color: #FF5300;
 	color: #ffffff;
-	border-radius: 1px;
+	border-radius: 2px;
+	padding: 5px;
 	text-decoration: none;
 }
 

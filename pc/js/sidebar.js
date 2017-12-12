@@ -1,3 +1,29 @@
+// 电话
+$(".telephoneNumber").blur(function(){
+  if(!/^(\(\d{3,4}\)|\d{3,4}-|\s)?\d{7,14}$/.test($('.telephoneNumber').val()) &&  !(/^1[34578]\d{9}$/.test($('.telephoneNumber').val()))){
+  	$('.telephoneNumber').css('border-color', 'red');
+  	$('.telephoneNumber').attr('placeholder', '请输入正确的联系方式') 
+  }
+});
+
+console.log($('.telephoneNumber'))
+
+$('.telephoneNumber').focus(function(){
+	$('.telephoneNumber').css('border-color', '#cccccc');
+	$('.telephoneNumber').attr('placeholder', '请输入您的手机号') 
+})
+
+$('.requirement_description').blur(function(){
+	if($('.requirement_description').val() == ''){
+		$('.requirement_description').css('border-color', 'red');		
+	}
+});
+
+$('.requirement_description').focus(function(){
+	$('.requirement_description').css('border-color', '#cccccc');
+})
+
+
 $(function(){
 	// 移入
 	$('.sidebar').on('mouseenter', '.sidebar-item', function(e){
@@ -52,10 +78,16 @@ $(function(){
 		var Requirement = AV.Object.extend('Requirement');
 		if($('.requirement_description').val() == ''){
 			alert('请填写您的需求描述')
+
 			return;
 		}
+
+	
 		if($('#telephoneNumber').val() == ''){
 			alert('请填写您的手机号码')
+			return;
+		}else if($('#telephoneNumber').css('border-color') == 'rgb(255, 0, 0)'){
+			alert('请输入正确的号码')
 			return;
 		}
 		// 需求描述
@@ -70,7 +102,13 @@ $(function(){
 	       // alert('提交成功');
 	       $('.requirement_description').val('');
 	       $('#telephoneNumber').val('');
+	       $('.tip-panel').fadeIn();
 	       $('.shade').css('display', 'none');
+
+	       setTimeout(function(){
+	       	 $('.tip-panel').fadeOut();
+	       }, 1500)
+
 	    }, function(error) {
 	    	alert('提交失败，请重新提交');
 	       alert(JSON.stringify(error));
